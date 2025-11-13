@@ -1,3 +1,4 @@
+
 ```markdown
 # OpenEvolve Function Minimization: x^x
 
@@ -10,7 +11,7 @@ We tested the workflow using the **Gemini API** for LLM-assisted code generation
 
 ---
 
-## Structure
+## Project Structure
 
 ```
 
@@ -19,25 +20,26 @@ We tested the workflow using the **Gemini API** for LLM-assisted code generation
 ├── initial_program.py    # Baseline random search algorithm
 ├── evaluator.py          # Evaluator scoring accuracy and runtime
 ├── run.py                # Script to launch OpenEvolve
-└── .open_evolve/         # Auto-generated folder storing best programs and checkpoints
+└── .openevolve_output/   openevolve_output# Auto-generated folder storing best programs and checkpoints
 
-````
+```yaml
 
 ---
 
 ## Key Steps
 
 1. **Initial Program**  
-   - A naive random search over `[0.2, 0.5]`, refined with local search around the current best candidate.
+   - A naive random search over `[1e-5, 2.0]`, iterations up to 50 times.
 
 2. **Evaluator**  
-   - Computes `score = -(error + runtime_weight * runtime)`  
-   - Tracks accuracy (`error`) and execution speed (`runtime`).
+   - Computes a fitness score combining accuracy and runtime:  
+     `score = -(error + runtime_weight * runtime)`  
+   - Tracks both **error** (distance from true minimum) and **runtime** (speed).
 
 3. **OpenEvolve Run**  
    - Evolved candidate programs via the Gemini LLM API.  
-   - Iterative generations with MAP-Elites to maintain diversity.  
-   - Checkpoints saved for potential intermediate program inspection.
+   - Iterative generations with **MAP-Elites** to maintain diversity.  
+   - Checkpoints saved for potential inspection of intermediate candidates.
 
 ---
 
@@ -46,17 +48,42 @@ We tested the workflow using the **Gemini API** for LLM-assisted code generation
 - **Best program metrics:**
   - Score: `-0.0000`
   - Error: `0.0000` (accurate minimum found)
-  - Runtime: `0.0009 s` (fast execution)
+  - Runtime: `0.0009 s` (very fast execution)
 
-- The program converged to the **global minimum \(x = 1/e\)** already in the first iteration.
+- The program converged near the **global minimum \(x = 1/e\)** already in the first/two iteration.  
+
+- The evolved program uses a **two-phase random search**:
+  1. Broad random sampling in `[0.2, 0.5]`
+  2. Local refinement around the current best candidate
+
+---
+
+## Intermediate Programs
+
+- All intermediate candidates are saved in **checkpoints**:
+
+```
+
+.openevolve_output/checkpoints/
+
+```
+
+- The final winning program is in:
+
+```
+
+.openevolve_output/best/best_program.py
+
+````
 
 ---
 
 ## Notes
 
 - Gemini API does **not support seeding**, so exact reproducibility may vary.  
-- Intermediate candidates can be extracted from `.open_evolve/checkpoints/` if needed.  
-- The example shows that even a simple baseline program can achieve the exact solution quickly with OpenEvolve’s evolutionary framework.
+- No text embedding model, so similarity filtering is off.
+- Even simple initial programs can find the correct minimum quickly for this function.  
+- For more complex functions, multiple iterations and generations will show gradual improvement.
 
 ---
 
@@ -65,20 +92,23 @@ We tested the workflow using the **Gemini API** for LLM-assisted code generation
 Run the evolution:
 
 ```bash
-python run.py
+python openevolve-run.py initial_program.py evaluator.py --config config.yaml
 ````
 
-The best evolved program is saved in:
+Check the best program:
 
+```bash
+cat .openevolve_output/best/best_program.py
 ```
-.open_evolve/best/best_program.py
-```
 
-Metrics for each candidate are available in `.open_evolve/checkpoints/`.
+Inspect checkpoints (optional):
 
+```bash
+ls .openevolve_output/checkpoints/
 ```
 
 ---
 
-If you want, I can also draft a **shorter “one-page” version** suitable for including in a GitHub repo that highlights just the workflow and results for quick reading. Do you want me to do that?
-```
+## License
+
+This repository is for demonstration purposes. Modify and experiment freely.
