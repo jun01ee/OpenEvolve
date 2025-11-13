@@ -1,5 +1,5 @@
 
-```markdown
+
 # OpenEvolve Function Minimization: x^x
 
 ## Overview
@@ -22,7 +22,7 @@ We tested the workflow using the **Gemini API** for LLM-assisted code generation
 ├── run.py                # Script to launch OpenEvolve
 └── .openevolve_output/   openevolve_output# Auto-generated folder storing best programs and checkpoints
 
-```yaml
+```
 
 ---
 
@@ -81,7 +81,7 @@ We tested the workflow using the **Gemini API** for LLM-assisted code generation
 ## Notes
 
 - Gemini API does **not support seeding**, so exact reproducibility may vary.  
-- No text embedding model, so similarity filtering is off.
+- Text embedding model failed, so similarity filtering is off.
 - Even simple initial programs can find the correct minimum quickly for this function.  
 - For more complex functions, multiple iterations and generations will show gradual improvement.
 
