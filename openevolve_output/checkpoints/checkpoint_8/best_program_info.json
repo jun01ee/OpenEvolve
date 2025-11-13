@@ -1,0 +1,14 @@
+{
+  "id": "2ccaf00e-a9f7-459e-b0b0-f40389a8c9e4",
+  "generation": 1,
+  "iteration": 5,
+  "current_iteration": 8,
+  "metrics": {
+    "score": -3.2396464872097576e-05,
+    "error": 6.150236986357527e-10,
+    "runtime": 0.0006479169969679788
+  },
+  "language": "python",
+  "timestamp": 1763013544.197073,
+  "saved_at": 1763013563.966732
+}

@@ -1,0 +1,2 @@
+2025-11-13 13:20:37,738 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251113_132037.log
+2025-11-13 13:20:40,968 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
