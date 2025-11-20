@@ -1,0 +1,162 @@
+2025-11-19 15:00:15,371 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251119_150015.log
+2025-11-19 15:00:15,398 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-19 15:00:15,463 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.0-flash-lite
+2025-11-19 15:00:15,463 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.0-flash-lite (weight: 1.00)
+2025-11-19 15:00:15,497 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-19 15:00:15,498 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-19 15:00:15,498 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-19 15:00:15,507 - openevolve.evaluator - INFO - Successfully loaded evaluation function from evaluator.py
+2025-11-19 15:00:15,507 - openevolve.evaluator - WARNING - Configuration has 'cascade_evaluation: true' but evaluator 'evaluator.py' does not define 'evaluate_stage1' function. This will fall back to direct evaluation, making the cascade setting useless. Consider setting 'cascade_evaluation: false' or implementing cascade functions.
+2025-11-19 15:00:15,507 - openevolve.evaluator - INFO - Initialized evaluator with evaluator.py
+2025-11-19 15:00:15,507 - openevolve.controller - INFO - Initialized OpenEvolve with initial_program.py
+2025-11-19 15:00:15,507 - openevolve.controller - INFO - Adding initial program to database
+2025-11-19 15:00:15,512 - openevolve.evaluator - WARNING - Unexpected evaluation result type: <class 'float'>
+2025-11-19 15:00:15,512 - openevolve.evaluator - INFO - Evaluated program b349a71a-f596-447f-b328-e946449d88f3 in 0.00s: error=0.0000
+2025-11-19 15:00:15,512 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2025-11-19 15:00:15,512 - openevolve.controller - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.0000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-19 15:00:15,524 - openevolve.process_parallel - INFO - Initialized process parallel controller with 2 workers
+2025-11-19 15:00:15,526 - openevolve.process_parallel - INFO - Started process pool with 2 processes
+2025-11-19 15:00:15,526 - openevolve.controller - INFO - Using island-based evolution with 2 islands
+2025-11-19 15:00:15,526 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:15,526 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:15,526 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2025-11-19 15:00:15,526 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 20 iterations (total: 21)
+2025-11-19 15:00:15,543 - openevolve.process_parallel - INFO - Early stopping disabled
+2025-11-19 15:00:20,569 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2025-11-19 15:00:20,569 - openevolve.process_parallel - INFO - Iteration 1: Program 11ef7867-723a-4325-b488-7564f12fb2b0 (parent: b349a71a-f596-447f-b328-e946449d88f3) completed in 4.18s
+2025-11-19 15:00:20,569 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:20,569 - openevolve.process_parallel - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.0000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-19 15:00:20,771 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 9}
+2025-11-19 15:00:20,771 - openevolve.process_parallel - INFO - Iteration 2: Program cbeaf10a-4da7-47e6-b53f-8c39c112966f (parent: b349a71a-f596-447f-b328-e946449d88f3) completed in 4.39s
+2025-11-19 15:00:20,771 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:20,771 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 2
+2025-11-19 15:00:20,771 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:20,771 - openevolve.database - INFO -    Island 0: 3 programs, best=0.0000, avg=0.0000, diversity=34.53, gen=1 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:20,771 - openevolve.database - INFO -  * Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1
+2025-11-19 15:00:20,773 - openevolve.database - INFO - Saved database with 3 programs to openevolve_output/checkpoints/checkpoint_2
+2025-11-19 15:00:20,774 - openevolve.controller - INFO - Saved best program at checkpoint 2 with metrics: error=0.0000
+2025-11-19 15:00:20,774 - openevolve.controller - INFO - Saved checkpoint at iteration 2 to openevolve_output/checkpoints/checkpoint_2
+2025-11-19 15:00:24,980 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 6}
+2025-11-19 15:00:24,980 - openevolve.process_parallel - INFO - Iteration 3: Program 86db8318-d149-4810-9927-c45416a21f42 (parent: b349a71a-f596-447f-b328-e946449d88f3) completed in 4.41s
+2025-11-19 15:00:24,980 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:25,610 - openevolve.process_parallel - INFO - Iteration 4: Program 09ebf676-f2eb-404e-8a5c-301c5763aad7 (parent: b349a71a-f596-447f-b328-e946449d88f3) completed in 4.84s
+2025-11-19 15:00:25,611 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:25,611 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 4
+2025-11-19 15:00:25,611 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:25,611 - openevolve.database - INFO -    Island 0: 5 programs, best=0.0000, avg=0.0000, diversity=60.37, gen=2 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:25,611 - openevolve.database - INFO -  * Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=2
+2025-11-19 15:00:25,613 - openevolve.database - INFO - Saved database with 5 programs to openevolve_output/checkpoints/checkpoint_4
+2025-11-19 15:00:25,614 - openevolve.controller - INFO - Saved best program at checkpoint 4 with metrics: error=0.0000
+2025-11-19 15:00:25,614 - openevolve.controller - INFO - Saved checkpoint at iteration 4 to openevolve_output/checkpoints/checkpoint_4
+2025-11-19 15:00:28,518 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 4}
+2025-11-19 15:00:28,518 - openevolve.process_parallel - INFO - Iteration 5: Program 9337a512-ee26-42db-853e-9b3fc48ddfca (parent: 11ef7867-723a-4325-b488-7564f12fb2b0) completed in 3.53s
+2025-11-19 15:00:28,518 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:31,880 - openevolve.process_parallel - INFO - Iteration 7: Program 617c2283-69a0-4245-a5f9-e40cc1430526 (parent: cbeaf10a-4da7-47e6-b53f-8c39c112966f) completed in 3.36s
+2025-11-19 15:00:31,881 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:32,409 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 3}
+2025-11-19 15:00:32,409 - openevolve.process_parallel - INFO - Iteration 6: Program 49c8ec7d-39f8-4c0f-b8a6-e5b6d6f21e43 (parent: cbeaf10a-4da7-47e6-b53f-8c39c112966f) completed in 6.79s
+2025-11-19 15:00:32,409 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:32,409 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 6
+2025-11-19 15:00:32,409 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:32,410 - openevolve.database - INFO -  * Island 0: 8 programs, best=0.0000, avg=0.0000, diversity=62.03, gen=4 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:32,410 - openevolve.database - INFO -    Island 1: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=3
+2025-11-19 15:00:32,417 - openevolve.database - INFO - Saved database with 9 programs to openevolve_output/checkpoints/checkpoint_6
+2025-11-19 15:00:32,418 - openevolve.controller - INFO - Saved best program at checkpoint 6 with metrics: error=0.0000
+2025-11-19 15:00:32,418 - openevolve.controller - INFO - Saved checkpoint at iteration 6 to openevolve_output/checkpoints/checkpoint_6
+2025-11-19 15:00:35,094 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 1, 'diversity': 3}
+2025-11-19 15:00:35,095 - openevolve.process_parallel - INFO - Iteration 8: Program cf3b4f33-0374-4f82-af7b-6fd89d534a49 (parent: 11ef7867-723a-4325-b488-7564f12fb2b0) completed in 3.21s
+2025-11-19 15:00:35,095 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:35,095 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 8
+2025-11-19 15:00:35,095 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:35,095 - openevolve.database - INFO -    Island 0: 9 programs, best=0.0000, avg=0.0000, diversity=62.03, gen=4 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:35,095 - openevolve.database - INFO -  * Island 1: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=4
+2025-11-19 15:00:35,101 - openevolve.database - INFO - Saved database with 10 programs to openevolve_output/checkpoints/checkpoint_8
+2025-11-19 15:00:35,102 - openevolve.controller - INFO - Saved best program at checkpoint 8 with metrics: error=0.0000
+2025-11-19 15:00:35,102 - openevolve.controller - INFO - Saved checkpoint at iteration 8 to openevolve_output/checkpoints/checkpoint_8
+2025-11-19 15:00:35,889 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 2}
+2025-11-19 15:00:35,890 - openevolve.process_parallel - INFO - Iteration 9: Program 1891f458-87cd-4a87-a6f9-99c9e4df0509 (parent: b349a71a-f596-447f-b328-e946449d88f3) completed in 3.48s
+2025-11-19 15:00:35,890 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:38,469 - openevolve.database - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 2, 'diversity': 3}
+2025-11-19 15:00:38,469 - openevolve.process_parallel - INFO - Iteration 10: Program 5edc9278-99db-4d91-bff6-57ac74df7392 (parent: c86235fe-5190-4458-8c4a-3de1f4157028) completed in 3.37s
+2025-11-19 15:00:38,470 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:38,470 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 10
+2025-11-19 15:00:38,470 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:38,470 - openevolve.database - INFO -    Island 0: 10 programs, best=0.0000, avg=0.0000, diversity=58.78, gen=5 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:38,471 - openevolve.database - INFO -  * Island 1: 2 programs, best=0.0000, avg=0.0000, diversity=20.10, gen=5 (best: 5edc9278-99db-4d91-bff6-57ac74df7392)
+2025-11-19 15:00:38,477 - openevolve.database - INFO - Saved database with 12 programs to openevolve_output/checkpoints/checkpoint_10
+2025-11-19 15:00:38,478 - openevolve.controller - INFO - Saved best program at checkpoint 10 with metrics: error=0.0000
+2025-11-19 15:00:38,478 - openevolve.controller - INFO - Saved checkpoint at iteration 10 to openevolve_output/checkpoints/checkpoint_10
+2025-11-19 15:00:40,585 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 4}
+2025-11-19 15:00:40,586 - openevolve.process_parallel - INFO - Iteration 11: Program 01ca5d4d-300f-4c13-b4a5-70a0d8bca06e (parent: b349a71a-f596-447f-b328-e946449d88f3) completed in 4.69s
+2025-11-19 15:00:40,586 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:44,727 - openevolve.database - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 4, 'diversity': 2}
+2025-11-19 15:00:44,728 - openevolve.process_parallel - INFO - Iteration 12: Program 836bc56e-a6c9-4b2c-97e9-95bda005569e (parent: c86235fe-5190-4458-8c4a-3de1f4157028) completed in 6.26s
+2025-11-19 15:00:44,728 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:44,728 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 12
+2025-11-19 15:00:44,729 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:44,729 - openevolve.database - INFO -    Island 0: 11 programs, best=0.0000, avg=0.0000, diversity=56.93, gen=6 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:44,729 - openevolve.database - INFO -  * Island 1: 3 programs, best=0.0000, avg=0.0000, diversity=23.33, gen=6 (best: 5edc9278-99db-4d91-bff6-57ac74df7392)
+2025-11-19 15:00:44,741 - openevolve.database - INFO - Saved database with 14 programs to openevolve_output/checkpoints/checkpoint_12
+2025-11-19 15:00:44,742 - openevolve.controller - INFO - Saved best program at checkpoint 12 with metrics: error=0.0000
+2025-11-19 15:00:44,742 - openevolve.controller - INFO - Saved checkpoint at iteration 12 to openevolve_output/checkpoints/checkpoint_12
+2025-11-19 15:00:53,177 - openevolve.process_parallel - INFO - Iteration 13: Program e279cd3b-9a74-4596-a4f6-d4f9d45d5133 (parent: 09ebf676-f2eb-404e-8a5c-301c5763aad7) completed in 12.60s
+2025-11-19 15:00:53,177 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:53,709 - openevolve.database - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 4, 'diversity': 3}
+2025-11-19 15:00:53,710 - openevolve.process_parallel - INFO - Iteration 14: Program 924e32b3-0ebc-465e-9d0c-a030ac693a92 (parent: 5edc9278-99db-4d91-bff6-57ac74df7392) completed in 8.97s
+2025-11-19 15:00:53,710 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:00:53,710 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 14
+2025-11-19 15:00:53,711 - openevolve.database - INFO - Island Status:
+2025-11-19 15:00:53,711 - openevolve.database - INFO -    Island 0: 12 programs, best=0.0000, avg=0.0000, diversity=56.93, gen=7 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:00:53,711 - openevolve.database - INFO -  * Island 1: 4 programs, best=0.0000, avg=0.0000, diversity=20.80, gen=7 (best: 5edc9278-99db-4d91-bff6-57ac74df7392)
+2025-11-19 15:00:53,724 - openevolve.database - INFO - Saved database with 16 programs to openevolve_output/checkpoints/checkpoint_14
+2025-11-19 15:00:53,725 - openevolve.controller - INFO - Saved best program at checkpoint 14 with metrics: error=0.0000
+2025-11-19 15:00:53,725 - openevolve.controller - INFO - Saved checkpoint at iteration 14 to openevolve_output/checkpoints/checkpoint_14
+2025-11-19 15:01:02,261 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 2}
+2025-11-19 15:01:02,261 - openevolve.database - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2025-11-19 15:01:02,262 - openevolve.process_parallel - INFO - Iteration 15: Program 00ee4bcd-5bd8-43df-9567-b9b8da7bcf8f (parent: 49c8ec7d-39f8-4c0f-b8a6-e5b6d6f21e43) completed in 9.08s
+2025-11-19 15:01:02,262 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:01:03,471 - openevolve.process_parallel - INFO - Iteration 16: Program 8387c1d1-eefd-4867-b3a2-cb41bc749d1d (parent: 836bc56e-a6c9-4b2c-97e9-95bda005569e) completed in 9.77s
+2025-11-19 15:01:03,471 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:01:03,471 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 16
+2025-11-19 15:01:03,472 - openevolve.database - INFO - Island Status:
+2025-11-19 15:01:03,472 - openevolve.database - INFO -    Island 0: 13 programs, best=0.0000, avg=0.0000, diversity=40.83, gen=8 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:01:03,472 - openevolve.database - INFO -  * Island 1: 5 programs, best=0.0000, avg=0.0000, diversity=17.10, gen=8 (best: 5edc9278-99db-4d91-bff6-57ac74df7392)
+2025-11-19 15:01:03,486 - openevolve.database - INFO - Saved database with 18 programs to openevolve_output/checkpoints/checkpoint_16
+2025-11-19 15:01:03,490 - openevolve.controller - INFO - Saved best program at checkpoint 16 with metrics: error=0.0000
+2025-11-19 15:01:03,490 - openevolve.controller - INFO - Saved checkpoint at iteration 16 to openevolve_output/checkpoints/checkpoint_16
+2025-11-19 15:01:08,103 - openevolve.process_parallel - INFO - Iteration 18: Program e639d60a-b730-49f6-a9a1-df6f3f062ddf (parent: 5edc9278-99db-4d91-bff6-57ac74df7392) completed in 4.63s
+2025-11-19 15:01:08,103 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:01:08,103 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 18
+2025-11-19 15:01:08,104 - openevolve.database - INFO - Island Status:
+2025-11-19 15:01:08,104 - openevolve.database - INFO -  * Island 0: 13 programs, best=0.0000, avg=0.0000, diversity=40.83, gen=9 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:01:08,104 - openevolve.database - INFO -    Island 1: 6 programs, best=0.0000, avg=0.0000, diversity=17.10, gen=8 (best: 5edc9278-99db-4d91-bff6-57ac74df7392)
+2025-11-19 15:01:08,118 - openevolve.database - INFO - Saved database with 19 programs to openevolve_output/checkpoints/checkpoint_18
+2025-11-19 15:01:08,119 - openevolve.controller - INFO - Saved best program at checkpoint 18 with metrics: error=0.0000
+2025-11-19 15:01:08,119 - openevolve.controller - INFO - Saved checkpoint at iteration 18 to openevolve_output/checkpoints/checkpoint_18
+2025-11-19 15:01:10,411 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 2}
+2025-11-19 15:01:10,412 - openevolve.process_parallel - INFO - Iteration 17: Program 14fb8faf-9173-44f8-b096-cf89df9e348a (parent: 9337a512-ee26-42db-853e-9b3fc48ddfca) completed in 8.15s
+2025-11-19 15:01:10,412 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:01:17,523 - openevolve.database - INFO - Population size (21) exceeds limit (20), removing 1 programs
+2025-11-19 15:01:17,523 - openevolve.database - INFO - Population size after cleanup: 20
+2025-11-19 15:01:17,523 - openevolve.process_parallel - INFO - Iteration 19: Program e239af34-5d78-4eba-bb85-0b5f1dd07498 (parent: 617c2283-69a0-4245-a5f9-e40cc1430526) completed in 9.41s
+2025-11-19 15:01:17,524 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:01:19,092 - openevolve.database - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 3, 'diversity': 2}
+2025-11-19 15:01:19,092 - openevolve.database - INFO - Population size (21) exceeds limit (20), removing 1 programs
+2025-11-19 15:01:19,092 - openevolve.database - INFO - Population size after cleanup: 20
+2025-11-19 15:01:19,093 - openevolve.process_parallel - INFO - Iteration 20: Program cf1bc86a-3978-4456-8c08-7510b7a5d4c9 (parent: 8387c1d1-eefd-4867-b3a2-cb41bc749d1d) completed in 8.68s
+2025-11-19 15:01:19,093 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-19 15:01:19,093 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 20
+2025-11-19 15:01:19,094 - openevolve.database - INFO - Island Status:
+2025-11-19 15:01:19,094 - openevolve.database - INFO -    Island 0: 13 programs, best=0.0000, avg=0.0000, diversity=31.13, gen=10 (best: b349a71a-f596-447f-b328-e946449d88f3)
+2025-11-19 15:01:19,095 - openevolve.database - INFO -  * Island 1: 7 programs, best=0.0000, avg=0.0000, diversity=17.10, gen=10 (best: 5edc9278-99db-4d91-bff6-57ac74df7392)
+2025-11-19 15:01:19,115 - openevolve.database - INFO - Saved database with 20 programs to openevolve_output/checkpoints/checkpoint_20
+2025-11-19 15:01:19,116 - openevolve.controller - INFO - Saved best program at checkpoint 20 with metrics: error=0.0000
+2025-11-19 15:01:19,116 - openevolve.controller - INFO - Saved checkpoint at iteration 20 to openevolve_output/checkpoints/checkpoint_20
+2025-11-19 15:01:19,116 - openevolve.process_parallel - INFO - ✅ Evolution completed - Maximum iterations reached
+2025-11-19 15:01:19,146 - openevolve.database - INFO - Saved database with 20 programs to openevolve_output/checkpoints/checkpoint_20
+2025-11-19 15:01:19,151 - openevolve.controller - INFO - Saved best program at checkpoint 20 with metrics: error=0.0000
+2025-11-19 15:01:19,152 - openevolve.controller - INFO - Saved checkpoint at iteration 20 to openevolve_output/checkpoints/checkpoint_20
+2025-11-19 15:01:19,278 - openevolve.process_parallel - INFO - Stopped process pool
+2025-11-19 15:01:19,278 - openevolve.controller - INFO - Using tracked best program: b349a71a-f596-447f-b328-e946449d88f3
+2025-11-19 15:01:19,278 - openevolve.controller - INFO - Evolution complete. Best program has metrics: error=0.0000
+2025-11-19 15:01:19,283 - openevolve.controller - INFO - Saved best program to openevolve_output/best/best_program.py with program info to openevolve_output/best/best_program_info.json
