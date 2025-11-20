@@ -1,14 +1,12 @@
 {
-  "id": "92c42d1f-48a4-4077-a891-9cf244f1c46a",
+  "id": "f90c7db5-b436-4142-a6ec-07e11ba90e00",
   "generation": 0,
   "iteration": 0,
   "current_iteration": 20,
   "metrics": {
-    "combined_score": 100.0,
-    "I1": 100.0,
-    "I2": 100.0
+    "error": 0.0
   },
   "language": "python",
-  "timestamp": 1763537248.002368,
-  "saved_at": 1763537476.423904
+  "timestamp": 1763630513.473397,
+  "saved_at": 1763630588.12341
 }

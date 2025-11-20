@@ -1,0 +1,31 @@
+2025-11-20 17:20:36,692 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251120_172036.log
+2025-11-20 17:20:36,800 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-20 17:20:37,118 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.0-pro
+2025-11-20 17:20:37,119 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.0-pro (weight: 1.00)
+2025-11-20 17:20:37,203 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-20 17:20:37,204 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-20 17:20:37,205 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-20 17:20:37,241 - openevolve.evaluator - INFO - Successfully loaded evaluation function from evaluator.py
+2025-11-20 17:20:37,241 - openevolve.evaluator - WARNING - Configuration has 'cascade_evaluation: true' but evaluator 'evaluator.py' does not define 'evaluate_stage1' function. This will fall back to direct evaluation, making the cascade setting useless. Consider setting 'cascade_evaluation: false' or implementing cascade functions.
+2025-11-20 17:20:37,241 - openevolve.evaluator - INFO - Initialized evaluator with evaluator.py
+2025-11-20 17:20:37,241 - openevolve.controller - INFO - Initialized OpenEvolve with initial_program.py
+2025-11-20 17:20:37,241 - openevolve.controller - INFO - Adding initial program to database
+2025-11-20 17:20:37,252 - openevolve.evaluator - WARNING - Unexpected evaluation result type: <class 'float'>
+2025-11-20 17:20:37,252 - openevolve.evaluator - INFO - Evaluated program 816977b1-e8d4-409b-89b0-ab71653ed4a9 in 0.01s: error=0.0000
+2025-11-20 17:20:37,253 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2025-11-20 17:20:37,253 - openevolve.controller - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.0000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-20 17:20:37,280 - openevolve.process_parallel - INFO - Initialized process parallel controller with 4 workers
+2025-11-20 17:20:37,282 - openevolve.process_parallel - INFO - Started process pool with 4 processes
+2025-11-20 17:20:37,282 - openevolve.controller - INFO - Using island-based evolution with 3 islands
+2025-11-20 17:20:37,282 - openevolve.database - INFO - Island Status:
+2025-11-20 17:20:37,282 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0 (best: 816977b1-e8d4-409b-89b0-ab71653ed4a9)
+2025-11-20 17:20:37,282 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2025-11-20 17:20:37,282 - openevolve.database - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2025-11-20 17:20:37,282 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 100 iterations (total: 101)
+2025-11-20 17:20:37,321 - openevolve.process_parallel - INFO - Early stopping disabled
+2025-11-20 17:20:49,276 - openevolve.controller - INFO - Received signal 2, initiating graceful shutdown...
+2025-11-20 17:20:49,277 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2025-11-20 17:20:49,278 - openevolve.process_parallel - INFO - Shutdown requested, canceling remaining evaluations...
+2025-11-20 17:20:49,278 - openevolve.process_parallel - INFO - ✅ Evolution completed - Shutdown requested
+2025-11-20 17:20:49,279 - openevolve.controller - INFO - Evolution stopped due to shutdown request
+2025-11-20 17:20:50,249 - openevolve.controller - INFO - Force exit requested - terminating immediately

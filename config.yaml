@@ -1,53 +1,63 @@
-# --- Global settings ---
-max_iterations: 20
-checkpoint_interval: 2
+# =========================
+#  Evolution Run Settings
+# =========================
+max_iterations: 100
+checkpoint_interval: 20
+diff_based_evolution: false
+cascade_evaluation: false
+max_code_length: 8000
 
-# --- LLM configuration ---
+
+# =========================
+#  LLM Configuration
+# =========================
 llm:
-  primary_model: "gemini-2.5-flash-lite"
+  primary_model: "gemini-2.5-flash"        
   primary_model_weight: 1.0
-  
   api_base: "https://generativelanguage.googleapis.com/v1beta/openai/"
   temperature: 0.7
-  max_tokens: 16000
+  max_tokens: 4096
   timeout: 120
 
-# --- Prompt configuration ---
+
+# =========================
+#  Prompt Rules
+# =========================
 prompt:
   system_message: |
-    You are an expert in functional analysis, symbolic mathematics, and numerical optimization.
-    Your task is to generate candidate Python functions f(x) that are:
-      - smooth, continuous, and numerically safe across x in [-5,5]
-      - simple, parametric, and tunable (e.g., f(x, a) = exp(-a*x*x))
-      - analytically meaningful, but not necessarily the exact optimal solution at first
+    You are evolving Python programs for a functional optimization problem.
+    The evaluator computes a numerical loss value that must be minimized.
 
-    Avoid:
-      - divisions by zero, NaNs, or values larger than 1e6
-      - brute-force Monte Carlo search inside the function
-      - completely rewriting the initial solution trivially
+    Rules:
+    - Always return VALID Python code only.
+    - The returned program must define either:
+        params = {"type": "...", ...}
+      OR
+        def f(x): ...
+    - Provide small, incremental mutations, not rewrites.
+    - Prefer modifying existing parameters instead of replacing everything.
+    - No Monte Carlo loops or brute-force exploration inside f(x).
+    - The function must remain numerically safe on [-6, 6].
+    - Do NOT output explanations, comments, or natural language.
+    
 
-    Encourage:
-      - exploring parametric families
-      - small mutations of parameters or simple function composition
-      - compact, elegant, and numerically evaluable expressions
-
-# --- Database (population) configuration ---
+# =========================
+#  Population & Archive
+# =========================
 database:
-  population_size: 20
-  archive_size: 20
-  num_islands: 2
-  elite_selection_ratio: 0.3
-  exploitation_ratio: 0.5
-
+  population_size: 24       # Larger population increases search diversity
+  archive_size: 60
+  num_islands: 3
+  elite_selection_ratio: 0.15
+  exploitation_ratio: 0.60
   embedding_model: null
-  similarity_threshold: 1.0
+  similarity_threshold: 0.85
 
-# --- Evaluator configuration ---
+
+# =========================
+#  Evaluator Configuration
+# =========================
 evaluator:
-  timeout: 30
-  cascade_thresholds: []
-  parallel_evaluations: 2
-
-# --- Evolution settings ---
-diff_based_evolution: false
-max_code_length: 10000
+  timeout: 60
+  parallel_evaluations: 4
+  # Since evaluator returns a single number, no additional config needed

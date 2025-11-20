@@ -1,0 +1,186 @@
+2025-11-20 17:21:53,315 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251120_172153.log
+2025-11-20 17:21:53,339 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-20 17:21:53,415 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.5-flash
+2025-11-20 17:21:53,416 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.5-flash (weight: 1.00)
+2025-11-20 17:21:53,461 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-20 17:21:53,462 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-20 17:21:53,462 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-20 17:21:53,469 - openevolve.evaluator - INFO - Successfully loaded evaluation function from evaluator.py
+2025-11-20 17:21:53,469 - openevolve.evaluator - WARNING - Configuration has 'cascade_evaluation: true' but evaluator 'evaluator.py' does not define 'evaluate_stage1' function. This will fall back to direct evaluation, making the cascade setting useless. Consider setting 'cascade_evaluation: false' or implementing cascade functions.
+2025-11-20 17:21:53,469 - openevolve.evaluator - INFO - Initialized evaluator with evaluator.py
+2025-11-20 17:21:53,469 - openevolve.controller - INFO - Initialized OpenEvolve with initial_program.py
+2025-11-20 17:21:53,469 - openevolve.controller - INFO - Adding initial program to database
+2025-11-20 17:21:53,473 - openevolve.evaluator - WARNING - Unexpected evaluation result type: <class 'float'>
+2025-11-20 17:21:53,473 - openevolve.evaluator - INFO - Evaluated program f90c7db5-b436-4142-a6ec-07e11ba90e00 in 0.00s: error=0.0000
+2025-11-20 17:21:53,473 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2025-11-20 17:21:53,473 - openevolve.controller - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.0000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-20 17:21:53,485 - openevolve.process_parallel - INFO - Initialized process parallel controller with 4 workers
+2025-11-20 17:21:53,486 - openevolve.process_parallel - INFO - Started process pool with 4 processes
+2025-11-20 17:21:53,486 - openevolve.controller - INFO - Using island-based evolution with 3 islands
+2025-11-20 17:21:53,486 - openevolve.database - INFO - Island Status:
+2025-11-20 17:21:53,486 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0 (best: f90c7db5-b436-4142-a6ec-07e11ba90e00)
+2025-11-20 17:21:53,486 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2025-11-20 17:21:53,487 - openevolve.database - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2025-11-20 17:21:53,487 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 100 iterations (total: 101)
+2025-11-20 17:21:53,519 - openevolve.process_parallel - INFO - Early stopping disabled
+2025-11-20 17:22:03,700 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 0, 'diversity': 5}
+2025-11-20 17:22:03,701 - openevolve.process_parallel - INFO - Iteration 1: Program d5a80921-eab3-4e6b-bc65-194cca56ccfa (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 9.26s
+2025-11-20 17:22:03,701 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:03,701 - openevolve.process_parallel - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.0000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-20 17:22:05,046 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 0, 'diversity': 0}
+2025-11-20 17:22:05,047 - openevolve.process_parallel - INFO - Iteration 4: Program 42f84cc3-ecc4-415b-9203-b870da909400 (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 10.60s
+2025-11-20 17:22:05,047 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:09,496 - openevolve.process_parallel - INFO - Iteration 2: Program d8dca516-3606-43e2-8c5a-6034a2cedb27 (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 15.05s
+2025-11-20 17:22:09,497 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:14,625 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 1, 'diversity': 0}
+2025-11-20 17:22:14,625 - openevolve.process_parallel - INFO - Iteration 3: Program 62283e67-4c35-4ef2-bab5-bb20caf80a77 (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 20.19s
+2025-11-20 17:22:14,625 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:15,000 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 0, 'diversity': 9}
+2025-11-20 17:22:15,001 - openevolve.process_parallel - INFO - Iteration 7: Program 6ef7942c-9ac6-4d58-9858-9c21c62ebb84 (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 5.50s
+2025-11-20 17:22:15,001 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:17,427 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 8}
+2025-11-20 17:22:17,427 - openevolve.process_parallel - INFO - Iteration 6: Program da57f71d-5615-4c82-a437-ffde643c2ddf (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 12.39s
+2025-11-20 17:22:17,427 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:17,658 - openevolve.process_parallel - INFO - Iteration 8: Program 7941e0ff-beae-4feb-a8a4-5f3c06414ad1 (parent: d5a80921-eab3-4e6b-bc65-194cca56ccfa) completed in 3.03s
+2025-11-20 17:22:17,658 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:18,836 - openevolve.process_parallel - INFO - Iteration 9: Program ed4d500a-7c7d-42f3-aec0-65f2c51c7a3c (parent: d5a80921-eab3-4e6b-bc65-194cca56ccfa) completed in 3.83s
+2025-11-20 17:22:18,836 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:20,606 - openevolve.process_parallel - INFO - Iteration 5: Program fbf416e3-35fa-407c-a6c1-d728ca08b386 (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 16.91s
+2025-11-20 17:22:20,606 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:23,725 - openevolve.process_parallel - INFO - Iteration 11: Program f46cccf2-1a4b-4690-b894-315a260a75ef (parent: 42f84cc3-ecc4-415b-9203-b870da909400) completed in 6.07s
+2025-11-20 17:22:23,726 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:26,198 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 0, 'diversity': 1}
+2025-11-20 17:22:26,198 - openevolve.process_parallel - INFO - Iteration 10: Program 2100ca19-2be1-4488-99ee-faccd5ada446 (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 8.77s
+2025-11-20 17:22:26,199 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:22:53,821 - openevolve.process_parallel - WARNING - Iteration 12 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 6.404230476s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '6s'}]}}]
+2025-11-20 17:22:57,537 - openevolve.process_parallel - INFO - Iteration 14: Program bcc6f8c5-2916-4f08-b199-d357799e2332 (parent: 6ef7942c-9ac6-4d58-9858-9c21c62ebb84) completed in 33.81s
+2025-11-20 17:22:57,538 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:00,171 - openevolve.process_parallel - INFO - Iteration 15: Program 433c536a-861e-4967-b1a1-7d63cf2218f5 (parent: 7941e0ff-beae-4feb-a8a4-5f3c06414ad1) completed in 33.97s
+2025-11-20 17:23:00,172 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:02,009 - openevolve.process_parallel - INFO - Iteration 16: Program f3783809-8d86-4d20-8980-a93718d4aca4 (parent: 42f84cc3-ecc4-415b-9203-b870da909400) completed in 8.18s
+2025-11-20 17:23:02,009 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:03,412 - openevolve.process_parallel - INFO - Iteration 18: Program 07f05978-6aa6-4196-8fb1-3c4e0c48b5d6 (parent: fbf416e3-35fa-407c-a6c1-d728ca08b386) completed in 3.23s
+2025-11-20 17:23:03,412 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:05,537 - openevolve.process_parallel - INFO - Iteration 19: Program 86b81f07-128d-49e7-bb33-30865cf88c27 (parent: f46cccf2-1a4b-4690-b894-315a260a75ef) completed in 3.53s
+2025-11-20 17:23:05,538 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:08,036 - openevolve.process_parallel - INFO - Iteration 20: Program d00c453c-daed-4b1f-ace8-b6cb84444bd7 (parent: d5a80921-eab3-4e6b-bc65-194cca56ccfa) completed in 4.63s
+2025-11-20 17:23:08,037 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:08,037 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 20
+2025-11-20 17:23:08,037 - openevolve.database - INFO - Island Status:
+2025-11-20 17:23:08,038 - openevolve.database - INFO -    Island 0: 18 programs, best=0.0000, avg=0.0000, diversity=46.57, gen=6 (best: f90c7db5-b436-4142-a6ec-07e11ba90e00)
+2025-11-20 17:23:08,038 - openevolve.database - INFO -    Island 1: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=6
+2025-11-20 17:23:08,038 - openevolve.database - INFO -  * Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=5
+2025-11-20 17:23:08,117 - openevolve.database - INFO - Saved database with 19 programs to openevolve_output/checkpoints/checkpoint_20
+2025-11-20 17:23:08,123 - openevolve.controller - INFO - Saved best program at checkpoint 20 with metrics: error=0.0000
+2025-11-20 17:23:08,123 - openevolve.controller - INFO - Saved checkpoint at iteration 20 to openevolve_output/checkpoints/checkpoint_20
+2025-11-20 17:23:09,847 - openevolve.process_parallel - INFO - Iteration 21: Program 08ab8fae-afc9-48ac-80b0-b01bcd641337 (parent: f3783809-8d86-4d20-8980-a93718d4aca4) completed in 4.30s
+2025-11-20 17:23:09,847 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:13,538 - openevolve.database - INFO - New MAP-Elites cell occupied in island 1: {'complexity': 0, 'diversity': 0}
+2025-11-20 17:23:13,538 - openevolve.process_parallel - INFO - Iteration 13: Program b3dc9e96-b4c2-48e4-936b-62ee3f872460 (parent: 3229f13d-11e3-44fa-a3b6-752050b27ea9) completed in 52.93s
+2025-11-20 17:23:13,538 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:14,482 - openevolve.process_parallel - INFO - Iteration 23: Program 4ba30987-1a82-47b6-a821-e50d1f11baab (parent: d5a80921-eab3-4e6b-bc65-194cca56ccfa) completed in 4.64s
+2025-11-20 17:23:14,483 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:15,644 - openevolve.process_parallel - INFO - Iteration 22: Program 86238578-e245-487e-8d32-550cb4fbf481 (parent: 62283e67-4c35-4ef2-bab5-bb20caf80a77) completed in 7.61s
+2025-11-20 17:23:15,645 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:23:18,569 - openevolve.process_parallel - WARNING - Iteration 17 error: LLM returned None response
+2025-11-20 17:23:48,676 - openevolve.process_parallel - WARNING - Iteration 24 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 11.539630874s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}]
+2025-11-20 17:23:48,978 - openevolve.process_parallel - WARNING - Iteration 25 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 11.243754338s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}]
+2025-11-20 17:23:50,837 - openevolve.process_parallel - WARNING - Iteration 26 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 9.3746207s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}]
+2025-11-20 17:23:53,808 - openevolve.process_parallel - WARNING - Iteration 27 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 6.413002841s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '6s'}]}}]
+2025-11-20 17:23:59,822 - openevolve.process_parallel - INFO - Iteration 31: Program ecf7bd53-c9ba-4b45-a19e-44d468955684 (parent: fbf416e3-35fa-407c-a6c1-d728ca08b386) completed in 6.02s
+2025-11-20 17:23:59,823 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:00,573 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:00,574 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:00,574 - openevolve.process_parallel - INFO - Iteration 30: Program dd418a06-af5a-48d1-b55b-3b08abd6ad09 (parent: 86b81f07-128d-49e7-bb33-30865cf88c27) completed in 9.73s
+2025-11-20 17:24:00,574 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:04,629 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:04,629 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:04,630 - openevolve.process_parallel - INFO - Iteration 32: Program 16549dcc-24e4-459d-b68b-089eabaa8e0c (parent: 3229f13d-11e3-44fa-a3b6-752050b27ea9) completed in 4.80s
+2025-11-20 17:24:04,630 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:05,068 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 0, 'diversity': 0}
+2025-11-20 17:24:05,069 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:05,069 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:05,069 - openevolve.process_parallel - INFO - Iteration 33: Program c2068714-1460-4b58-9f13-c3d01d7d56dc (parent: fbf416e3-35fa-407c-a6c1-d728ca08b386) completed in 4.49s
+2025-11-20 17:24:05,070 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:08,878 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:08,878 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:08,878 - openevolve.process_parallel - INFO - Iteration 34: Program 6cd730f9-f1ed-4d5e-b1e5-0a92e52bbe43 (parent: d00c453c-daed-4b1f-ace8-b6cb84444bd7) completed in 4.24s
+2025-11-20 17:24:08,879 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:10,590 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:10,591 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:10,591 - openevolve.process_parallel - INFO - Iteration 35: Program 99cd2c0a-4d1e-4312-b674-412b5209b201 (parent: 3229f13d-11e3-44fa-a3b6-752050b27ea9) completed in 5.53s
+2025-11-20 17:24:10,591 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:16,977 - openevolve.database - WARNING - Parent 62283e67-4c35-4ef2-bab5-bb20caf80a77 not found, using current_island 2
+2025-11-20 17:24:16,978 - openevolve.database - INFO - New MAP-Elites cell occupied in island 2: {'complexity': 0, 'diversity': 0}
+2025-11-20 17:24:16,978 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:16,978 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:16,979 - openevolve.process_parallel - INFO - Iteration 28: Program 7e9f5db0-d9f5-435f-b418-4d65da80731d (parent: 62283e67-4c35-4ef2-bab5-bb20caf80a77) completed in 28.30s
+2025-11-20 17:24:16,979 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:17,502 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:17,503 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:17,503 - openevolve.process_parallel - INFO - Iteration 36: Program 08986a7a-b37b-4bf9-bb33-7aba26865407 (parent: 3229f13d-11e3-44fa-a3b6-752050b27ea9) completed in 8.63s
+2025-11-20 17:24:17,503 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:19,724 - openevolve.process_parallel - WARNING - Iteration 29 error: LLM returned None response
+2025-11-20 17:24:23,663 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:23,664 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:23,664 - openevolve.process_parallel - INFO - Iteration 38: Program d3d229ff-1bb9-46c9-9d69-0e81163db083 (parent: 86238578-e245-487e-8d32-550cb4fbf481) completed in 6.68s
+2025-11-20 17:24:23,664 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:26,197 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:24:26,198 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:24:26,199 - openevolve.process_parallel - INFO - Iteration 37: Program ed7c4256-4dcb-4ab8-87af-bee4e3f88f39 (parent: f90c7db5-b436-4142-a6ec-07e11ba90e00) completed in 15.60s
+2025-11-20 17:24:26,199 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:24:52,437 - openevolve.process_parallel - WARNING - Iteration 39 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 7.784481605s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '7s'}]}}]
+2025-11-20 17:24:53,881 - openevolve.process_parallel - WARNING - Iteration 40 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 6.334276591s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '6s'}]}}]
+2025-11-20 17:24:58,678 - openevolve.process_parallel - WARNING - Iteration 41 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\nPlease retry in 1.554715068s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '1s'}]}}]
+2025-11-20 17:25:00,060 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:00,062 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:00,062 - openevolve.process_parallel - INFO - Iteration 43: Program 51ab31af-e834-4d7b-b866-75e55fe1f441 (parent: ecf7bd53-c9ba-4b45-a19e-44d468955684) completed in 7.62s
+2025-11-20 17:25:00,063 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:00,805 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:00,807 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:00,807 - openevolve.process_parallel - INFO - Iteration 42: Program 2c88bf77-18d8-484e-89f4-7721083ca0e2 (parent: b3dc9e96-b4c2-48e4-936b-62ee3f872460) completed in 34.61s
+2025-11-20 17:25:00,807 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:01,441 - openevolve.database - WARNING - Parent f46cccf2-1a4b-4690-b894-315a260a75ef not found, using current_island 1
+2025-11-20 17:25:01,443 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:01,443 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:01,443 - openevolve.process_parallel - INFO - Iteration 44: Program 26c5a1c4-c18d-43e5-9e54-2fe83d8736bf (parent: f46cccf2-1a4b-4690-b894-315a260a75ef) completed in 7.56s
+2025-11-20 17:25:01,443 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:02,093 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:02,093 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:02,093 - openevolve.process_parallel - INFO - Iteration 45: Program 23db0d8c-514a-444d-a901-884a5550073b (parent: 7e9f5db0-d9f5-435f-b418-4d65da80731d) completed in 3.41s
+2025-11-20 17:25:02,093 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:03,588 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:03,589 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:03,589 - openevolve.process_parallel - INFO - Iteration 46: Program 7ebe9451-8f07-40dd-95c8-07c2936ee52a (parent: 7e9f5db0-d9f5-435f-b418-4d65da80731d) completed in 3.52s
+2025-11-20 17:25:03,590 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:05,973 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:05,974 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:05,974 - openevolve.process_parallel - INFO - Iteration 49: Program f7145261-61ac-454b-a552-20d45c49d85d (parent: 16549dcc-24e4-459d-b68b-089eabaa8e0c) completed in 3.88s
+2025-11-20 17:25:05,974 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:07,828 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:07,829 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:07,829 - openevolve.process_parallel - INFO - Iteration 50: Program 9012acea-428e-4c09-a8e6-d3c0c6884a7a (parent: 86b81f07-128d-49e7-bb33-30865cf88c27) completed in 4.24s
+2025-11-20 17:25:07,829 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:08,679 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:08,680 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:08,680 - openevolve.process_parallel - INFO - Iteration 51: Program 7993af43-9021-4efd-a26b-78f0a6710a2b (parent: 7e9f5db0-d9f5-435f-b418-4d65da80731d) completed in 2.70s
+2025-11-20 17:25:08,680 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:09,309 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:09,310 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:09,310 - openevolve.process_parallel - INFO - Iteration 48: Program c7a89b78-6165-48b2-a0a2-db54a0c2d23b (parent: 86238578-e245-487e-8d32-550cb4fbf481) completed in 7.87s
+2025-11-20 17:25:09,310 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:10,370 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:10,371 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:10,371 - openevolve.process_parallel - INFO - Iteration 47: Program e7470e5c-1b9e-4dce-872d-32166b267828 (parent: 08986a7a-b37b-4bf9-bb33-7aba26865407) completed in 9.56s
+2025-11-20 17:25:10,371 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:10,585 - openevolve.database - INFO - Population size (25) exceeds limit (24), removing 1 programs
+2025-11-20 17:25:10,585 - openevolve.database - INFO - Population size after cleanup: 24
+2025-11-20 17:25:10,586 - openevolve.database - INFO - Cleaned up 1 stale island best program references
+2025-11-20 17:25:10,586 - openevolve.process_parallel - INFO - Iteration 52: Program 00e40645-bfc1-4db9-ab73-ca2c130905cf (parent: 23db0d8c-514a-444d-a901-884a5550073b) completed in 2.75s
+2025-11-20 17:25:10,586 - openevolve.process_parallel - INFO - Metrics: error=0.0000
+2025-11-20 17:25:15,432 - openevolve.controller - INFO - Received signal 2, initiating graceful shutdown...
+2025-11-20 17:25:15,432 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2025-11-20 17:25:15,432 - openevolve.process_parallel - INFO - Shutdown requested, canceling remaining evaluations...
+2025-11-20 17:25:15,433 - openevolve.process_parallel - INFO - ✅ Evolution completed - Shutdown requested
+2025-11-20 17:25:15,433 - openevolve.controller - INFO - Evolution stopped due to shutdown request
+2025-11-20 17:25:15,662 - openevolve.controller - INFO - Force exit requested - terminating immediately
