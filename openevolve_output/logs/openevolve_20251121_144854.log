@@ -1,0 +1,8 @@
+2025-11-21 14:48:54,294 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251121_144854.log
+2025-11-21 14:48:54,451 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-21 14:48:54,721 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.5-flash
+2025-11-21 14:48:54,722 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.5-flash (weight: 1.00)
+2025-11-21 14:48:54,797 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-21 14:48:54,798 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-21 14:48:54,798 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-21 14:48:54,808 - openevolve.evaluator - ERROR - Error loading evaluation function: No module named 'scipy'

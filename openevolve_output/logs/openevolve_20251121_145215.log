@@ -1,0 +1,52 @@
+2025-11-21 14:52:15,787 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251121_145215.log
+2025-11-21 14:52:15,823 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-21 14:52:15,894 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.5-flash
+2025-11-21 14:52:15,894 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.5-flash (weight: 1.00)
+2025-11-21 14:52:15,928 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-21 14:52:15,928 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-21 14:52:15,928 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-21 14:52:51,363 - openevolve.evaluator - INFO - Successfully loaded evaluation function from evaluator.py
+2025-11-21 14:52:51,364 - openevolve.evaluator - WARNING - Configuration has 'cascade_evaluation: true' but evaluator 'evaluator.py' does not define 'evaluate_stage1' function. This will fall back to direct evaluation, making the cascade setting useless. Consider setting 'cascade_evaluation: false' or implementing cascade functions.
+2025-11-21 14:52:51,364 - openevolve.evaluator - INFO - Initialized evaluator with evaluator.py
+2025-11-21 14:52:51,364 - openevolve.controller - INFO - Initialized OpenEvolve with initial_program.py
+2025-11-21 14:52:51,364 - openevolve.controller - INFO - Adding initial program to database
+2025-11-21 14:52:51,371 - openevolve.evaluator - INFO - Evaluated program 7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0 in 0.01s: score=inf, error='str' object has no attribute 'get_wavefunction'
+2025-11-21 14:52:51,371 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2025-11-21 14:52:51,371 - openevolve.controller - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (inf) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-21 14:52:51,401 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2025-11-21 14:52:51,403 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2025-11-21 14:52:51,403 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2025-11-21 14:52:51,403 - openevolve.database - INFO - Island Status:
+2025-11-21 14:52:51,403 - openevolve.database - INFO -  * Island 0: 1 programs, best=inf, avg=inf, diversity=0.00, gen=0 (best: 7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0)
+2025-11-21 14:52:51,403 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 10000 iterations (total: 10001)
+2025-11-21 14:52:51,419 - openevolve.process_parallel - INFO - Early stopping disabled
+2025-11-21 14:53:04,670 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2025-11-21 14:53:04,670 - openevolve.process_parallel - INFO - Iteration 1: Program 1e679dae-332b-4045-b867-3f4fb18598e5 (parent: 7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0) completed in 11.73s
+2025-11-21 14:53:04,671 - openevolve.process_parallel - INFO - Metrics: score=inf, error='str' object has no attribute 'get_wavefunction'
+2025-11-21 14:53:04,671 - openevolve.process_parallel - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (inf) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-21 14:53:12,654 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 9}
+2025-11-21 14:53:12,654 - openevolve.process_parallel - INFO - Iteration 2: Program 2d75eaec-ff82-4661-a81a-f1dbd59f6966 (parent: 7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0) completed in 7.99s
+2025-11-21 14:53:12,655 - openevolve.process_parallel - INFO - Metrics: score=inf, error='str' object has no attribute 'get_wavefunction'
+2025-11-21 14:53:23,753 - openevolve.process_parallel - WARNING - Iteration 3 error: LLM returned None response
+2025-11-21 14:53:35,023 - openevolve.process_parallel - WARNING - Iteration 4 error: LLM returned None response
+2025-11-21 14:53:41,324 - openevolve.process_parallel - INFO - Iteration 5: Program ee8589fc-f633-4171-bdad-358a0c57165c (parent: 7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0) completed in 6.30s
+2025-11-21 14:53:41,325 - openevolve.process_parallel - INFO - Metrics: score=inf, error='str' object has no attribute 'get_wavefunction'
+2025-11-21 14:53:51,968 - openevolve.process_parallel - WARNING - Iteration 6 error: LLM returned None response
+2025-11-21 14:54:02,386 - openevolve.process_parallel - WARNING - Iteration 7 error: LLM returned None response
+2025-11-21 14:54:13,414 - openevolve.process_parallel - WARNING - Iteration 8 error: LLM returned None response
+2025-11-21 14:54:20,485 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 14:54:20,485 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 14:54:20,485 - openevolve.process_parallel - INFO - Iteration 9: Program 045a8cdb-4614-4e1e-b24f-901ce3f2f886 (parent: 7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0) completed in 7.06s
+2025-11-21 14:54:20,485 - openevolve.process_parallel - INFO - Metrics: score=inf, error='str' object has no attribute 'get_wavefunction'
+2025-11-21 14:54:20,486 - openevolve.process_parallel - ERROR - Error submitting iteration 11: Total of weights must be finite
+2025-11-21 14:54:30,963 - openevolve.process_parallel - WARNING - Iteration 10 error: LLM returned None response
+2025-11-21 14:54:45,349 - openevolve.process_parallel - WARNING - Iteration 11 error: LLM returned None response
+2025-11-21 14:54:45,350 - openevolve.process_parallel - ERROR - Error submitting iteration 12: Total of weights must be finite
+2025-11-21 14:54:45,350 - openevolve.process_parallel - INFO - ✅ Evolution completed - Maximum iterations reached
+2025-11-21 14:54:45,359 - openevolve.database - INFO - Saved database with 4 programs to openevolve_output/checkpoints/checkpoint_10000
+2025-11-21 14:54:45,360 - openevolve.controller - INFO - Saved best program at checkpoint 10000 with metrics: score=inf, error='str' object has no attribute 'get_wavefunction'
+2025-11-21 14:54:45,360 - openevolve.controller - INFO - Saved checkpoint at iteration 10000 to openevolve_output/checkpoints/checkpoint_10000
+2025-11-21 14:54:45,521 - openevolve.process_parallel - INFO - Stopped process pool
+2025-11-21 14:54:45,521 - openevolve.controller - INFO - Using tracked best program: 7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0
+2025-11-21 14:54:45,521 - openevolve.controller - INFO - Evolution complete. Best program has metrics: score=inf, error='str' object has no attribute 'get_wavefunction'
+2025-11-21 14:54:45,538 - openevolve.controller - INFO - Saved best program to openevolve_output/best/best_program.py with program info to openevolve_output/best/best_program_info.json

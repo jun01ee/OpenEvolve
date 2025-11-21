@@ -1,0 +1,35 @@
+2025-11-21 15:22:54,358 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251121_152254.log
+2025-11-21 15:22:54,400 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-21 15:22:54,738 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.5-flash
+2025-11-21 15:22:54,739 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.5-flash (weight: 1.00)
+2025-11-21 15:22:54,818 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-21 15:22:54,819 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-21 15:22:54,819 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-21 15:22:54,822 - openevolve.evaluator - INFO - Successfully loaded evaluation function from evaluator.py
+2025-11-21 15:22:54,822 - openevolve.evaluator - WARNING - Configuration has 'cascade_evaluation: true' but evaluator 'evaluator.py' does not define 'evaluate_stage1' function. This will fall back to direct evaluation, making the cascade setting useless. Consider setting 'cascade_evaluation: false' or implementing cascade functions.
+2025-11-21 15:22:54,822 - openevolve.evaluator - INFO - Initialized evaluator with evaluator.py
+2025-11-21 15:22:54,822 - openevolve.controller - INFO - Initialized OpenEvolve with initial_program.py
+2025-11-21 15:22:54,822 - openevolve.controller - INFO - Adding initial program to database
+2025-11-21 15:22:55,564 - openevolve.evaluator - INFO - Evaluated program dc15fce3-7833-4a2e-a972-b980ebff9bcc in 0.74s: error=Runtime Physics Error: invalid syntax (tmp_jtl0erc.py, line 1)
+2025-11-21 15:22:55,565 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2025-11-21 15:22:55,611 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2025-11-21 15:22:55,612 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2025-11-21 15:22:55,613 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2025-11-21 15:22:55,613 - openevolve.database - INFO - Island Status:
+2025-11-21 15:22:55,613 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0 (best: dc15fce3-7833-4a2e-a972-b980ebff9bcc)
+2025-11-21 15:22:55,613 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 10000 iterations (total: 10001)
+2025-11-21 15:22:55,634 - openevolve.process_parallel - INFO - Early stopping disabled
+2025-11-21 15:23:05,700 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2025-11-21 15:23:05,700 - openevolve.process_parallel - INFO - Iteration 1: Program 2fda8953-9e4b-492a-a250-12a49f4d990a (parent: dc15fce3-7833-4a2e-a972-b980ebff9bcc) completed in 9.04s
+2025-11-21 15:23:05,700 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp_2g8hynh.py, line 1)
+2025-11-21 15:23:05,700 - openevolve.process_parallel - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.0000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-21 15:23:16,021 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 9}
+2025-11-21 15:23:16,021 - openevolve.process_parallel - INFO - Iteration 2: Program 8d9d5951-10ca-430b-a35e-7bef8de72cb2 (parent: dc15fce3-7833-4a2e-a972-b980ebff9bcc) completed in 10.32s
+2025-11-21 15:23:16,021 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpe1rmzoj0.py, line 1)
+2025-11-21 15:23:24,577 - openevolve.controller - INFO - Received signal 2, initiating graceful shutdown...
+2025-11-21 15:23:24,577 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2025-11-21 15:23:24,583 - openevolve.process_parallel - INFO - Shutdown requested, canceling remaining evaluations...
+2025-11-21 15:23:24,583 - openevolve.process_parallel - INFO - ✅ Evolution completed - Shutdown requested
+2025-11-21 15:23:24,584 - openevolve.controller - INFO - Evolution stopped due to shutdown request
+2025-11-21 15:23:25,031 - openevolve.controller - INFO - Force exit requested - terminating immediately
+2025-11-21 15:23:26,019 - openevolve.controller - INFO - Force exit requested - terminating immediately

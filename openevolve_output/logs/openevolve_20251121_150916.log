@@ -1,0 +1,170 @@
+2025-11-21 15:09:16,049 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251121_150916.log
+2025-11-21 15:09:16,071 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-21 15:09:16,139 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.5-flash
+2025-11-21 15:09:16,140 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.5-flash (weight: 1.00)
+2025-11-21 15:09:16,174 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-21 15:09:16,175 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-21 15:09:16,175 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-21 15:09:16,181 - openevolve.evaluator - INFO - Successfully loaded evaluation function from evaluator.py
+2025-11-21 15:09:16,181 - openevolve.evaluator - WARNING - Configuration has 'cascade_evaluation: true' but evaluator 'evaluator.py' does not define 'evaluate_stage1' function. This will fall back to direct evaluation, making the cascade setting useless. Consider setting 'cascade_evaluation: false' or implementing cascade functions.
+2025-11-21 15:09:16,181 - openevolve.evaluator - INFO - Initialized evaluator with evaluator.py
+2025-11-21 15:09:16,181 - openevolve.controller - INFO - Initialized OpenEvolve with initial_program.py
+2025-11-21 15:09:16,181 - openevolve.controller - INFO - Adding initial program to database
+2025-11-21 15:09:16,968 - openevolve.evaluator - INFO - Evaluated program cd96417c-c87d-42d3-9d88-b898ed9de331 in 0.79s: error=Runtime Physics Error: invalid syntax (tmpma3y3eo3.py, line 1)
+2025-11-21 15:09:16,969 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2025-11-21 15:09:16,981 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2025-11-21 15:09:16,982 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2025-11-21 15:09:16,982 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2025-11-21 15:09:16,982 - openevolve.database - INFO - Island Status:
+2025-11-21 15:09:16,982 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0 (best: cd96417c-c87d-42d3-9d88-b898ed9de331)
+2025-11-21 15:09:16,982 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 10000 iterations (total: 10001)
+2025-11-21 15:09:16,991 - openevolve.process_parallel - INFO - Early stopping disabled
+2025-11-21 15:09:27,225 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2025-11-21 15:09:27,226 - openevolve.process_parallel - INFO - Iteration 1: Program 184e381d-4555-4ce4-8597-e279967223a6 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 9.45s
+2025-11-21 15:09:27,226 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp44ipzrag.py, line 1)
+2025-11-21 15:09:27,226 - openevolve.process_parallel - WARNING - ⚠️  No 'combined_score' metric found in evaluation results. Using average of all numeric metrics (0.0000) for evolution guidance. For better evolution results, please modify your evaluator to return a 'combined_score' metric that properly weights different aspects of program performance.
+2025-11-21 15:09:37,584 - openevolve.process_parallel - WARNING - Iteration 2 error: No valid diffs found in response
+2025-11-21 15:09:46,697 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 0}
+2025-11-21 15:09:46,698 - openevolve.process_parallel - INFO - Iteration 3: Program c3f14dcc-dc53-4236-9c97-f48230f2e348 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 9.11s
+2025-11-21 15:09:46,698 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp4wfd3c5u.py, line 1)
+2025-11-21 15:09:56,930 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 15:09:56,931 - openevolve.process_parallel - INFO - Iteration 4: Program aada113b-7682-46fd-9194-02aa86752408 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 10.23s
+2025-11-21 15:09:56,931 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpm0_7o021.py, line 1)
+2025-11-21 15:10:13,139 - openevolve.process_parallel - WARNING - Iteration 5 error: LLM returned None response
+2025-11-21 15:10:20,872 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 1}
+2025-11-21 15:10:20,872 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:10:20,873 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:10:20,873 - openevolve.process_parallel - INFO - Iteration 6: Program ed178474-370b-454d-93f0-0155ee27f845 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 7.73s
+2025-11-21 15:10:20,873 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpgi7wjn32.py, line 1)
+2025-11-21 15:10:33,482 - openevolve.process_parallel - WARNING - Iteration 7 error: LLM returned None response
+2025-11-21 15:10:44,353 - openevolve.process_parallel - WARNING - Iteration 8 error: LLM returned None response
+2025-11-21 15:10:55,274 - openevolve.process_parallel - WARNING - Iteration 9 error: LLM returned None response
+2025-11-21 15:11:02,248 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:11:02,248 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:11:02,248 - openevolve.process_parallel - INFO - Iteration 10: Program 9ba3bc87-4336-4849-9e5c-a137bead478c (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 6.97s
+2025-11-21 15:11:02,248 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpwhyyu_zb.py, line 1)
+2025-11-21 15:11:14,644 - openevolve.process_parallel - WARNING - Iteration 11 error: LLM returned None response
+2025-11-21 15:11:21,137 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:11:21,137 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:11:21,137 - openevolve.process_parallel - INFO - Iteration 12: Program a650b2ef-f12d-45cc-b7cc-c8b0aa0d0839 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 6.48s
+2025-11-21 15:11:21,138 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpm7k60aq7.py, line 1)
+2025-11-21 15:11:33,349 - openevolve.process_parallel - WARNING - Iteration 13 error: LLM returned None response
+2025-11-21 15:11:44,062 - openevolve.process_parallel - WARNING - Iteration 14 error: LLM returned None response
+2025-11-21 15:11:55,346 - openevolve.process_parallel - WARNING - Iteration 15 error: LLM returned None response
+2025-11-21 15:12:06,415 - openevolve.process_parallel - WARNING - Iteration 16 error: LLM returned None response
+2025-11-21 15:12:18,982 - openevolve.process_parallel - WARNING - Iteration 17 error: LLM returned None response
+2025-11-21 15:12:26,307 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:12:26,307 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:12:26,307 - openevolve.process_parallel - INFO - Iteration 18: Program eff0c98a-f061-4972-99d3-ca00a434a016 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 7.32s
+2025-11-21 15:12:26,307 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp6l4mmsiw.py, line 1)
+2025-11-21 15:12:37,733 - openevolve.process_parallel - WARNING - Iteration 19 error: LLM returned None response
+2025-11-21 15:12:48,928 - openevolve.process_parallel - WARNING - Iteration 20 error: LLM returned None response
+2025-11-21 15:13:01,328 - openevolve.process_parallel - WARNING - Iteration 21 error: LLM returned None response
+2025-11-21 15:13:12,655 - openevolve.process_parallel - WARNING - Iteration 22 error: LLM returned None response
+2025-11-21 15:13:24,426 - openevolve.process_parallel - WARNING - Iteration 23 error: LLM returned None response
+2025-11-21 15:13:34,970 - openevolve.process_parallel - WARNING - Iteration 24 error: LLM returned None response
+2025-11-21 15:13:46,117 - openevolve.process_parallel - WARNING - Iteration 25 error: LLM returned None response
+2025-11-21 15:13:57,639 - openevolve.process_parallel - WARNING - Iteration 26 error: LLM returned None response
+2025-11-21 15:14:08,873 - openevolve.process_parallel - WARNING - Iteration 27 error: LLM returned None response
+2025-11-21 15:14:20,907 - openevolve.process_parallel - WARNING - Iteration 28 error: LLM returned None response
+2025-11-21 15:14:33,713 - openevolve.process_parallel - WARNING - Iteration 29 error: LLM returned None response
+2025-11-21 15:14:45,349 - openevolve.process_parallel - WARNING - Iteration 30 error: LLM returned None response
+2025-11-21 15:14:57,694 - openevolve.process_parallel - WARNING - Iteration 31 error: LLM returned None response
+2025-11-21 15:15:09,628 - openevolve.process_parallel - WARNING - Iteration 32 error: LLM returned None response
+2025-11-21 15:15:17,384 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 1}
+2025-11-21 15:15:17,385 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:15:17,385 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:15:17,385 - openevolve.process_parallel - INFO - Iteration 33: Program f153fcbc-f508-41f7-8171-e7bde178b580 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 7.75s
+2025-11-21 15:15:17,385 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp9w1hzre6.py, line 1)
+2025-11-21 15:15:28,819 - openevolve.process_parallel - WARNING - Iteration 34 error: LLM returned None response
+2025-11-21 15:15:39,933 - openevolve.process_parallel - WARNING - Iteration 35 error: LLM returned None response
+2025-11-21 15:15:48,465 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 0}
+2025-11-21 15:15:48,466 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:15:48,466 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:15:48,466 - openevolve.process_parallel - INFO - Iteration 36: Program cf0cde43-b9ad-4952-974c-faeb08c7eb83 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 8.53s
+2025-11-21 15:15:48,466 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpqz11t_ft.py, line 1)
+2025-11-21 15:15:59,439 - openevolve.process_parallel - WARNING - Iteration 37 error: LLM returned None response
+2025-11-21 15:16:10,675 - openevolve.process_parallel - WARNING - Iteration 38 error: LLM returned None response
+2025-11-21 15:16:20,915 - openevolve.process_parallel - WARNING - Iteration 39 error: LLM returned None response
+2025-11-21 15:16:33,175 - openevolve.process_parallel - WARNING - Iteration 40 error: LLM returned None response
+2025-11-21 15:16:44,695 - openevolve.process_parallel - WARNING - Iteration 41 error: LLM returned None response
+2025-11-21 15:16:55,917 - openevolve.process_parallel - WARNING - Iteration 42 error: LLM returned None response
+2025-11-21 15:17:06,890 - openevolve.process_parallel - WARNING - Iteration 43 error: LLM returned None response
+2025-11-21 15:17:15,160 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:17:15,160 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:17:15,160 - openevolve.process_parallel - INFO - Iteration 44: Program 292ed7ff-feba-4d6b-8177-f9e82dfc9d79 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 8.27s
+2025-11-21 15:17:15,160 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmplf1kvlf2.py, line 1)
+2025-11-21 15:17:25,799 - openevolve.process_parallel - WARNING - Iteration 45 error: LLM returned None response
+2025-11-21 15:17:37,429 - openevolve.process_parallel - WARNING - Iteration 46 error: LLM returned None response
+2025-11-21 15:17:48,644 - openevolve.process_parallel - WARNING - Iteration 47 error: LLM returned None response
+2025-11-21 15:17:56,392 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 3}
+2025-11-21 15:17:56,393 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:17:56,393 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:17:56,393 - openevolve.process_parallel - INFO - Iteration 48: Program 3d5f4ea2-06d2-468a-bcb7-0a520dfc5a67 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 7.74s
+2025-11-21 15:17:56,393 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmppmp14mhx.py, line 1)
+2025-11-21 15:18:07,555 - openevolve.process_parallel - WARNING - Iteration 49 error: LLM returned None response
+2025-11-21 15:18:13,436 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:18:13,436 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:18:13,436 - openevolve.process_parallel - INFO - Iteration 50: Program c7589f8f-fb24-4b02-aa62-9f52e00e2e52 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 5.88s
+2025-11-21 15:18:13,436 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpgkd2shn0.py, line 1)
+2025-11-21 15:18:24,784 - openevolve.process_parallel - WARNING - Iteration 51 error: LLM returned None response
+2025-11-21 15:18:32,208 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:18:32,208 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:18:32,208 - openevolve.process_parallel - INFO - Iteration 52: Program 3b13c6cf-acd7-4653-8284-6c07c146df8c (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 7.43s
+2025-11-21 15:18:32,208 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmph44q0y91.py, line 1)
+2025-11-21 15:18:43,678 - openevolve.process_parallel - WARNING - Iteration 53 error: No valid diffs found in response
+2025-11-21 15:18:55,949 - openevolve.process_parallel - WARNING - Iteration 54 error: No valid diffs found in response
+2025-11-21 15:19:07,815 - openevolve.process_parallel - WARNING - Iteration 55 error: LLM returned None response
+2025-11-21 15:19:20,298 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 2}
+2025-11-21 15:19:20,298 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:19:20,299 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:19:20,299 - openevolve.process_parallel - INFO - Iteration 56: Program c7d2433c-ec40-4dcd-8156-1d4c56db3d59 (parent: 3d5f4ea2-06d2-468a-bcb7-0a520dfc5a67) completed in 12.48s
+2025-11-21 15:19:20,299 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpk0fy8fu3.py, line 1)
+2025-11-21 15:19:27,910 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 7, 'diversity': 3}
+2025-11-21 15:19:27,911 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:19:27,911 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:19:27,911 - openevolve.process_parallel - INFO - Iteration 57: Program 4d255f22-588f-4475-8330-b27fa89d0caf (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 7.61s
+2025-11-21 15:19:27,911 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpg68edvzf.py, line 1)
+2025-11-21 15:19:39,184 - openevolve.process_parallel - WARNING - Iteration 58 error: LLM returned None response
+2025-11-21 15:19:50,178 - openevolve.process_parallel - WARNING - Iteration 59 error: LLM returned None response
+2025-11-21 15:20:01,081 - openevolve.process_parallel - WARNING - Iteration 60 error: LLM returned None response
+2025-11-21 15:20:08,041 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 0}
+2025-11-21 15:20:08,042 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:20:08,042 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:20:08,042 - openevolve.process_parallel - INFO - Iteration 61: Program 4c9dc84c-bf74-4107-b85a-c88232b10ec1 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 6.97s
+2025-11-21 15:20:08,042 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpg0o0m6k9.py, line 1)
+2025-11-21 15:20:19,485 - openevolve.process_parallel - WARNING - Iteration 62 error: LLM returned None response
+2025-11-21 15:20:27,181 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:20:27,181 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:20:27,181 - openevolve.process_parallel - INFO - Iteration 63: Program 79cb330d-dcc5-440e-8a03-0e2eb158aa39 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 7.70s
+2025-11-21 15:20:27,181 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpju6e5x73.py, line 1)
+2025-11-21 15:20:35,443 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:20:35,444 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:20:35,444 - openevolve.process_parallel - INFO - Iteration 64: Program c88d5a78-ea4e-48b1-8d8c-49570b4fdc72 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 8.26s
+2025-11-21 15:20:35,444 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmpvvuzkfbo.py, line 1)
+2025-11-21 15:20:46,161 - openevolve.process_parallel - WARNING - Iteration 65 error: LLM returned None response
+2025-11-21 15:20:58,605 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:20:58,605 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:20:58,605 - openevolve.process_parallel - INFO - Iteration 66: Program 04d35dac-09b4-4fe4-84cf-e0acdfbfe397 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 12.44s
+2025-11-21 15:20:58,605 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp7l2th2g9.py, line 1)
+2025-11-21 15:21:09,687 - openevolve.process_parallel - WARNING - Iteration 67 error: LLM returned None response
+2025-11-21 15:21:21,754 - openevolve.process_parallel - WARNING - Iteration 68 error: LLM returned None response
+2025-11-21 15:21:33,123 - openevolve.process_parallel - WARNING - Iteration 69 error: LLM returned None response
+2025-11-21 15:21:44,510 - openevolve.process_parallel - WARNING - Iteration 70 error: LLM returned None response
+2025-11-21 15:21:52,571 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 0}
+2025-11-21 15:21:52,571 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:21:52,571 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:21:52,571 - openevolve.process_parallel - INFO - Iteration 71: Program 4390d5f1-08eb-4203-b9ff-0b59dabdd086 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 8.05s
+2025-11-21 15:21:52,571 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp09us8dy3.py, line 1)
+2025-11-21 15:22:04,634 - openevolve.process_parallel - WARNING - Iteration 72 error: LLM returned None response
+2025-11-21 15:22:11,416 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:22:11,416 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:22:11,416 - openevolve.process_parallel - INFO - Iteration 73: Program af94de44-57e4-4865-9367-5d414bbb97a1 (parent: cd96417c-c87d-42d3-9d88-b898ed9de331) completed in 6.78s
+2025-11-21 15:22:11,416 - openevolve.process_parallel - INFO - Metrics: error=Runtime Physics Error: invalid syntax (tmp57jg_uru.py, line 1)
+2025-11-21 15:22:14,210 - openevolve.controller - INFO - Received signal 2, initiating graceful shutdown...
+2025-11-21 15:22:14,210 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2025-11-21 15:22:14,213 - openevolve.process_parallel - INFO - Shutdown requested, canceling remaining evaluations...
+2025-11-21 15:22:14,213 - openevolve.process_parallel - INFO - ✅ Evolution completed - Shutdown requested
+2025-11-21 15:22:14,213 - openevolve.controller - INFO - Evolution stopped due to shutdown request
+2025-11-21 15:22:18,465 - openevolve.controller - INFO - Force exit requested - terminating immediately
+2025-11-21 15:22:29,010 - openevolve.controller - INFO - Force exit requested - terminating immediately

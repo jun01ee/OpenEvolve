@@ -1,0 +1,13 @@
+{
+  "id": "7d6ec8d4-f4eb-4fe5-b927-b4a48d9337d0",
+  "generation": 0,
+  "iteration": 0,
+  "current_iteration": 10000,
+  "metrics": {
+    "score": Infinity,
+    "error": "'str' object has no attribute 'get_wavefunction'"
+  },
+  "language": "python",
+  "timestamp": 1763707971.371464,
+  "saved_at": 1763708085.360642
+}

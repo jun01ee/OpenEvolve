@@ -1,12 +1,15 @@
 {
-  "id": "e1411c1f-cde3-46ef-956d-c335401704c9",
-  "generation": 0,
-  "iteration": 0,
-  "timestamp": 1763629524.157202,
-  "parent_id": null,
+  "id": "5e9c9c48-9a3f-4034-affc-2e65032cb1db",
+  "generation": 1,
+  "iteration": 1,
+  "timestamp": 1763715238.3102689,
+  "parent_id": "ad986584-e258-4e64-bc72-65ed69009cb6",
   "metrics": {
-    "error": 0.0
+    "combined_score": -0.006332573977646831,
+    "score": -0.006332573977646831,
+    "var_x": 0.125,
+    "var_xi": 0.05066059182117465
   },
   "language": "python",
-  "saved_at": 1763629581.2701702
+  "saved_at": 1763715283.145764
 }

@@ -1,0 +1,909 @@
+2025-11-21 15:28:54,441 - openevolve.controller - INFO - Logging to openevolve_output/logs/openevolve_20251121_152854.log
+2025-11-21 15:28:54,469 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2025-11-21 15:28:54,547 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: gemini-2.5-flash
+2025-11-21 15:28:54,547 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: gemini-2.5-flash (weight: 1.00)
+2025-11-21 15:28:54,586 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2025-11-21 15:28:54,587 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2025-11-21 15:28:54,587 - openevolve.database - INFO - Initialized program database with 0 programs
+2025-11-21 15:28:54,593 - openevolve.evaluator - INFO - Successfully loaded evaluation function from evaluator.py
+2025-11-21 15:28:54,594 - openevolve.evaluator - WARNING - Configuration has 'cascade_evaluation: true' but evaluator 'evaluator.py' does not define 'evaluate_stage1' function. This will fall back to direct evaluation, making the cascade setting useless. Consider setting 'cascade_evaluation: false' or implementing cascade functions.
+2025-11-21 15:28:54,594 - openevolve.evaluator - INFO - Initialized evaluator with evaluator.py
+2025-11-21 15:28:54,594 - openevolve.controller - INFO - Initialized OpenEvolve with initial_program.py
+2025-11-21 15:28:54,594 - openevolve.controller - INFO - Adding initial program to database
+2025-11-21 15:28:55,340 - openevolve.evaluator - INFO - Evaluated program 4dbc4c5b-e0ae-43b3-b150-cfc798b98053 in 0.75s: combined_score=1.1938, score=1.1938, var_x=0.3310, var_xi=3.6062
+2025-11-21 15:28:55,340 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2025-11-21 15:28:55,352 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2025-11-21 15:28:55,354 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2025-11-21 15:28:55,354 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2025-11-21 15:28:55,354 - openevolve.database - INFO - Island Status:
+2025-11-21 15:28:55,354 - openevolve.database - INFO -  * Island 0: 1 programs, best=1.1938, avg=1.1938, diversity=0.00, gen=0 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 15:28:55,354 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 10000 iterations (total: 10001)
+2025-11-21 15:28:55,373 - openevolve.process_parallel - INFO - Early stopping disabled
+2025-11-21 15:29:10,220 - openevolve.process_parallel - WARNING - Iteration 1 error: No valid diffs found in response
+2025-11-21 15:29:21,010 - openevolve.process_parallel - WARNING - Iteration 2 error: LLM returned None response
+2025-11-21 15:29:31,507 - openevolve.process_parallel - WARNING - Iteration 3 error: LLM returned None response
+2025-11-21 15:29:43,209 - openevolve.process_parallel - WARNING - Iteration 4 error: No valid diffs found in response
+2025-11-21 15:29:53,367 - openevolve.process_parallel - WARNING - Iteration 5 error: LLM returned None response
+2025-11-21 15:30:04,879 - openevolve.process_parallel - WARNING - Iteration 6 error: LLM returned None response
+2025-11-21 15:30:16,365 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2025-11-21 15:30:16,365 - openevolve.process_parallel - INFO - Iteration 7: Program c35204d4-8530-445b-b56b-dafaf1523828 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 11.49s
+2025-11-21 15:30:16,365 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:30:26,638 - openevolve.process_parallel - WARNING - Iteration 8 error: LLM returned None response
+2025-11-21 15:30:36,504 - openevolve.process_parallel - WARNING - Iteration 9 error: LLM returned None response
+2025-11-21 15:30:43,800 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 15:30:43,800 - openevolve.process_parallel - INFO - Iteration 10: Program e9a5ce40-45f7-40d5-a140-8e09e37550a3 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.30s
+2025-11-21 15:30:43,800 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:30:50,877 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 9}
+2025-11-21 15:30:50,877 - openevolve.process_parallel - INFO - Iteration 11: Program 6e118336-3c88-48af-aeef-60afce5421e7 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.08s
+2025-11-21 15:30:50,877 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:31:00,976 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 9}
+2025-11-21 15:31:00,976 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:31:00,976 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:31:00,976 - openevolve.process_parallel - INFO - Iteration 12: Program cd75664d-3f38-4dc8-8b58-22703712ab5a (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 10.09s
+2025-11-21 15:31:00,976 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:31:11,302 - openevolve.process_parallel - WARNING - Iteration 13 error: LLM returned None response
+2025-11-21 15:31:21,648 - openevolve.process_parallel - WARNING - Iteration 14 error: LLM returned None response
+2025-11-21 15:31:31,522 - openevolve.process_parallel - WARNING - Iteration 15 error: LLM returned None response
+2025-11-21 15:31:39,907 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:31:39,907 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:31:39,907 - openevolve.process_parallel - INFO - Iteration 16: Program 16c1c42d-7246-4388-ad2b-82749ce19929 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.39s
+2025-11-21 15:31:39,907 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:31:51,282 - openevolve.process_parallel - WARNING - Iteration 17 error: LLM returned None response
+2025-11-21 15:31:57,895 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:31:57,895 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:31:57,896 - openevolve.process_parallel - INFO - Iteration 18: Program 278ddc8c-a8cd-4cc5-9745-e11bd1234b80 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.61s
+2025-11-21 15:31:57,896 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:32:08,877 - openevolve.process_parallel - WARNING - Iteration 19 error: LLM returned None response
+2025-11-21 15:32:19,475 - openevolve.process_parallel - WARNING - Iteration 20 error: LLM returned None response
+2025-11-21 15:32:28,280 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 1}
+2025-11-21 15:32:28,280 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:32:28,280 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:32:28,280 - openevolve.process_parallel - INFO - Iteration 21: Program 20c3a390-4583-4465-b25d-bf19af94ca13 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.80s
+2025-11-21 15:32:28,280 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:32:35,994 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:32:35,994 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:32:35,994 - openevolve.process_parallel - INFO - Iteration 22: Program 87071c89-8f38-4b7b-8345-3d511f574188 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.71s
+2025-11-21 15:32:35,994 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:32:46,141 - openevolve.process_parallel - WARNING - Iteration 23 error: LLM returned None response
+2025-11-21 15:32:56,213 - openevolve.process_parallel - WARNING - Iteration 24 error: LLM returned None response
+2025-11-21 15:33:02,891 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:33:02,891 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:33:02,891 - openevolve.process_parallel - INFO - Iteration 25: Program 5f82a339-2c83-4c9a-8871-5a7e1e182e51 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.68s
+2025-11-21 15:33:02,891 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:33:10,828 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 0}
+2025-11-21 15:33:10,828 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:33:10,828 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:33:10,828 - openevolve.process_parallel - INFO - Iteration 26: Program ed49fd47-8c21-481e-bb01-c05f7755ffd0 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.94s
+2025-11-21 15:33:10,828 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:33:21,063 - openevolve.process_parallel - WARNING - Iteration 27 error: LLM returned None response
+2025-11-21 15:33:31,027 - openevolve.process_parallel - WARNING - Iteration 28 error: LLM returned None response
+2025-11-21 15:33:41,596 - openevolve.process_parallel - WARNING - Iteration 29 error: LLM returned None response
+2025-11-21 15:33:51,059 - openevolve.process_parallel - WARNING - Iteration 30 error: LLM returned None response
+2025-11-21 15:34:01,771 - openevolve.process_parallel - WARNING - Iteration 31 error: LLM returned None response
+2025-11-21 15:34:08,397 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:34:08,397 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:34:08,397 - openevolve.process_parallel - INFO - Iteration 32: Program 5b94aefa-6750-4ce0-97a8-c740d34967f0 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.62s
+2025-11-21 15:34:08,397 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:34:16,120 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:34:16,120 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:34:16,120 - openevolve.process_parallel - INFO - Iteration 33: Program 26bd4e9f-3abc-4a91-92ae-764f2399f809 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.72s
+2025-11-21 15:34:16,120 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:34:22,239 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:34:22,239 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:34:22,239 - openevolve.process_parallel - INFO - Iteration 34: Program 3afab86f-73fb-4869-8598-b800fb184653 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.11s
+2025-11-21 15:34:22,239 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:34:31,713 - openevolve.process_parallel - WARNING - Iteration 35 error: LLM returned None response
+2025-11-21 15:34:41,535 - openevolve.process_parallel - WARNING - Iteration 36 error: LLM returned None response
+2025-11-21 15:34:50,262 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 1}
+2025-11-21 15:34:50,262 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:34:50,262 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:34:50,262 - openevolve.process_parallel - INFO - Iteration 37: Program 4619a1bd-6a5a-49e5-ad1d-c7ddab640742 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.72s
+2025-11-21 15:34:50,262 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:34:57,488 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:34:57,488 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:34:57,488 - openevolve.process_parallel - INFO - Iteration 38: Program e3139ac7-8440-41bd-bbb6-9fa0c0aedca1 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.22s
+2025-11-21 15:34:57,488 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:35:05,298 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:35:05,298 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:35:05,298 - openevolve.process_parallel - INFO - Iteration 39: Program 990ab45a-142e-4059-a952-eb238b7fa7ac (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.81s
+2025-11-21 15:35:05,298 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:35:16,454 - openevolve.process_parallel - WARNING - Iteration 40 error: LLM returned None response
+2025-11-21 15:35:26,651 - openevolve.process_parallel - WARNING - Iteration 41 error: LLM returned None response
+2025-11-21 15:35:37,309 - openevolve.process_parallel - WARNING - Iteration 42 error: LLM returned None response
+2025-11-21 15:35:48,573 - openevolve.process_parallel - WARNING - Iteration 43 error: LLM returned None response
+2025-11-21 15:35:59,060 - openevolve.process_parallel - WARNING - Iteration 44 error: LLM returned None response
+2025-11-21 15:36:09,496 - openevolve.process_parallel - WARNING - Iteration 45 error: LLM returned None response
+2025-11-21 15:36:20,141 - openevolve.process_parallel - WARNING - Iteration 46 error: LLM returned None response
+2025-11-21 15:36:29,967 - openevolve.process_parallel - WARNING - Iteration 47 error: LLM returned None response
+2025-11-21 15:36:37,447 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:36:37,448 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:36:37,448 - openevolve.process_parallel - INFO - Iteration 48: Program 6ef110e0-cbf5-4b6d-8fa9-098aa5d53151 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.48s
+2025-11-21 15:36:37,448 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:36:47,266 - openevolve.process_parallel - WARNING - Iteration 49 error: LLM returned None response
+2025-11-21 15:36:58,557 - openevolve.process_parallel - WARNING - Iteration 50 error: LLM returned None response
+2025-11-21 15:37:08,994 - openevolve.process_parallel - WARNING - Iteration 51 error: LLM returned None response
+2025-11-21 15:37:16,177 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 15:37:16,178 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:37:16,178 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:37:16,178 - openevolve.process_parallel - INFO - Iteration 52: Program d460f23a-b509-43cb-8e8f-9be941656801 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.18s
+2025-11-21 15:37:16,178 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:37:27,695 - openevolve.process_parallel - WARNING - Iteration 53 error: LLM returned None response
+2025-11-21 15:37:37,478 - openevolve.process_parallel - WARNING - Iteration 54 error: LLM returned None response
+2025-11-21 15:37:48,688 - openevolve.process_parallel - WARNING - Iteration 55 error: LLM returned None response
+2025-11-21 15:37:59,847 - openevolve.process_parallel - WARNING - Iteration 56 error: LLM returned None response
+2025-11-21 15:38:06,819 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:38:06,819 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:38:06,819 - openevolve.process_parallel - INFO - Iteration 57: Program 913cddeb-f409-43a1-b4e7-344235a2913c (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.97s
+2025-11-21 15:38:06,819 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:38:16,887 - openevolve.process_parallel - WARNING - Iteration 58 error: LLM returned None response
+2025-11-21 15:38:27,107 - openevolve.process_parallel - WARNING - Iteration 59 error: LLM returned None response
+2025-11-21 15:38:34,187 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:38:34,187 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:38:34,187 - openevolve.process_parallel - INFO - Iteration 60: Program 476817e8-df85-4ec3-a80a-b5186d41a210 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.08s
+2025-11-21 15:38:34,187 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:38:34,187 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 60
+2025-11-21 15:38:34,187 - openevolve.database - INFO - Island Status:
+2025-11-21 15:38:34,188 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=20 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 15:38:34,196 - openevolve.database - INFO - Saved database with 4 programs to openevolve_output/checkpoints/checkpoint_60
+2025-11-21 15:38:34,198 - openevolve.controller - INFO - Saved best program at checkpoint 60 with metrics: combined_score=1.1938, score=1.1938, var_x=0.3310, var_xi=3.6062
+2025-11-21 15:38:34,198 - openevolve.controller - INFO - Saved checkpoint at iteration 60 to openevolve_output/checkpoints/checkpoint_60
+2025-11-21 15:38:44,113 - openevolve.process_parallel - WARNING - Iteration 61 error: LLM returned None response
+2025-11-21 15:38:54,338 - openevolve.process_parallel - WARNING - Iteration 62 error: LLM returned None response
+2025-11-21 15:39:04,593 - openevolve.process_parallel - WARNING - Iteration 63 error: LLM returned None response
+2025-11-21 15:39:11,840 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:39:11,840 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:39:11,840 - openevolve.process_parallel - INFO - Iteration 64: Program d23cfb41-0ad6-422c-b294-d0aacf9fff25 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.24s
+2025-11-21 15:39:11,841 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:39:19,806 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 15:39:19,806 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:39:19,806 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:39:19,806 - openevolve.process_parallel - INFO - Iteration 65: Program 9be9edd5-6838-4171-a737-2303cd8ff9fb (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.97s
+2025-11-21 15:39:19,806 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:39:26,836 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:39:26,836 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:39:26,836 - openevolve.process_parallel - INFO - Iteration 66: Program 218a3b8e-54a9-453d-b1d4-23ff11aacbe4 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.03s
+2025-11-21 15:39:26,836 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:39:35,420 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:39:35,420 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:39:35,420 - openevolve.process_parallel - INFO - Iteration 67: Program bedf9625-3ac1-4bd6-9c42-b71516849846 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.58s
+2025-11-21 15:39:35,420 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:39:45,541 - openevolve.process_parallel - WARNING - Iteration 68 error: LLM returned None response
+2025-11-21 15:39:55,984 - openevolve.process_parallel - WARNING - Iteration 69 error: LLM returned None response
+2025-11-21 15:40:05,469 - openevolve.process_parallel - WARNING - Iteration 70 error: LLM returned None response
+2025-11-21 15:40:12,658 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:40:12,658 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:40:12,658 - openevolve.process_parallel - INFO - Iteration 71: Program 793de19c-0d66-49b4-ad00-a587a063d300 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.19s
+2025-11-21 15:40:12,659 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:40:22,192 - openevolve.process_parallel - WARNING - Iteration 72 error: LLM returned None response
+2025-11-21 15:40:31,486 - openevolve.process_parallel - WARNING - Iteration 73 error: LLM returned None response
+2025-11-21 15:40:41,515 - openevolve.process_parallel - WARNING - Iteration 74 error: LLM returned None response
+2025-11-21 15:40:48,427 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 15:40:48,427 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:40:48,427 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:40:48,427 - openevolve.process_parallel - INFO - Iteration 75: Program ea105865-4069-4294-8d9d-29702fd7d375 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.91s
+2025-11-21 15:40:48,427 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:40:55,802 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:40:55,802 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:40:55,802 - openevolve.process_parallel - INFO - Iteration 76: Program 3597e997-12b6-4674-8b62-f7d28889b36f (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.37s
+2025-11-21 15:40:55,802 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:41:03,594 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 15:41:03,595 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 15:41:03,595 - openevolve.process_parallel - INFO - Iteration 77: Program 47c845de-c9e3-41af-98ce-e8123e160d06 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.79s
+2025-11-21 15:41:03,595 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 15:41:14,200 - openevolve.process_parallel - WARNING - Iteration 78 error: LLM returned None response
+2025-11-21 15:41:25,986 - openevolve.process_parallel - WARNING - Iteration 79 error: LLM returned None response
+2025-11-21 15:42:01,385 - openevolve.process_parallel - WARNING - Iteration 80 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 58.873637747s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}]
+2025-11-21 15:42:37,132 - openevolve.process_parallel - WARNING - Iteration 81 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 23.139129244s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}]
+2025-11-21 15:43:12,498 - openevolve.process_parallel - WARNING - Iteration 82 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 47.750389372s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}]
+2025-11-21 15:43:47,893 - openevolve.process_parallel - WARNING - Iteration 83 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 12.358178948s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}]
+2025-11-21 15:44:23,019 - openevolve.process_parallel - WARNING - Iteration 84 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 37.234775374s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '37s'}]}}]
+2025-11-21 15:44:58,278 - openevolve.process_parallel - WARNING - Iteration 85 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 1.971627478s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '1s'}]}}]
+2025-11-21 15:45:33,432 - openevolve.process_parallel - WARNING - Iteration 86 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 26.817313895s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '26s'}]}}]
+2025-11-21 15:46:08,731 - openevolve.process_parallel - WARNING - Iteration 87 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 51.508694218s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '51s'}]}}]
+2025-11-21 15:46:44,391 - openevolve.process_parallel - WARNING - Iteration 88 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 15.858876103s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '15s'}]}}]
+2025-11-21 15:47:19,415 - openevolve.process_parallel - WARNING - Iteration 89 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 40.835973476s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}]
+2025-11-21 15:47:55,158 - openevolve.process_parallel - WARNING - Iteration 90 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 5.092667194s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}]
+2025-11-21 15:48:29,561 - openevolve.process_parallel - WARNING - Iteration 91 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 30.684144319s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}]
+2025-11-21 15:49:04,237 - openevolve.process_parallel - WARNING - Iteration 92 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 56.017978739s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '56s'}]}}]
+2025-11-21 15:49:39,042 - openevolve.process_parallel - WARNING - Iteration 93 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 21.212301296s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}]
+2025-11-21 15:50:13,688 - openevolve.process_parallel - WARNING - Iteration 94 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 46.560364007s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}]
+2025-11-21 15:50:49,095 - openevolve.process_parallel - WARNING - Iteration 95 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 11.155635877s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}]
+2025-11-21 15:51:23,968 - openevolve.process_parallel - WARNING - Iteration 96 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 36.285500219s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}]
+2025-11-21 15:51:59,551 - openevolve.process_parallel - WARNING - Iteration 97 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 699.529538ms.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '0s'}]}}]
+2025-11-21 15:52:35,001 - openevolve.process_parallel - WARNING - Iteration 98 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 25.249374824s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}]
+2025-11-21 15:53:10,783 - openevolve.process_parallel - WARNING - Iteration 99 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 49.464561879s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}]
+2025-11-21 15:53:45,136 - openevolve.process_parallel - WARNING - Iteration 100 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 15.111219261s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '15s'}]}}]
+2025-11-21 15:54:20,535 - openevolve.process_parallel - WARNING - Iteration 101 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 39.711155337s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '39s'}]}}]
+2025-11-21 15:54:55,882 - openevolve.process_parallel - WARNING - Iteration 102 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 4.346015642s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}]
+2025-11-21 15:55:30,680 - openevolve.process_parallel - WARNING - Iteration 103 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 29.567967091s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}]
+2025-11-21 15:56:05,848 - openevolve.process_parallel - WARNING - Iteration 104 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 54.387680892s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}]
+2025-11-21 15:56:40,472 - openevolve.process_parallel - WARNING - Iteration 105 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 19.775641833s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}]
+2025-11-21 15:57:16,421 - openevolve.process_parallel - WARNING - Iteration 106 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 43.823512529s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43s'}]}}]
+2025-11-21 15:57:51,148 - openevolve.process_parallel - WARNING - Iteration 107 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 9.097285076s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}]
+2025-11-21 15:58:25,813 - openevolve.process_parallel - WARNING - Iteration 108 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 34.423347617s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}]
+2025-11-21 15:59:01,625 - openevolve.process_parallel - WARNING - Iteration 109 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 58.627494147s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}]
+2025-11-21 15:59:36,806 - openevolve.process_parallel - WARNING - Iteration 110 error: LLM generation failed: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 250, model: gemini-2.5-flash\nPlease retry in 23.465548166s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '250'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}]
+2025-11-21 16:00:11,433 - openevolve.process_parallel - WARNING - Iteration 111 error: LLM returned None response
+2025-11-21 16:00:21,689 - openevolve.process_parallel - WARNING - Iteration 112 error: LLM returned None response
+2025-11-21 16:00:31,797 - openevolve.process_parallel - WARNING - Iteration 113 error: LLM returned None response
+2025-11-21 16:00:45,915 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:00:45,916 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:00:45,916 - openevolve.process_parallel - INFO - Iteration 114: Program 2a29d000-d85f-4f74-9e7b-c75b76a8f74e (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 14.12s
+2025-11-21 16:00:45,916 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:00:53,203 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:00:53,203 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:00:53,203 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:00:53,203 - openevolve.process_parallel - INFO - Iteration 115: Program 5bf11aff-cb76-452c-9d53-0cbf97d60802 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.28s
+2025-11-21 16:00:53,203 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:01:04,171 - openevolve.process_parallel - WARNING - Iteration 116 error: LLM returned None response
+2025-11-21 16:01:14,497 - openevolve.process_parallel - WARNING - Iteration 117 error: LLM returned None response
+2025-11-21 16:01:24,008 - openevolve.process_parallel - WARNING - Iteration 118 error: LLM returned None response
+2025-11-21 16:01:38,003 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:01:38,003 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:01:38,003 - openevolve.process_parallel - INFO - Iteration 119: Program e0f49d56-4aee-4178-b831-b06bdbd7c489 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 13.99s
+2025-11-21 16:01:38,003 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:01:48,137 - openevolve.process_parallel - WARNING - Iteration 120 error: LLM returned None response
+2025-11-21 16:01:58,476 - openevolve.process_parallel - WARNING - Iteration 121 error: LLM returned None response
+2025-11-21 16:02:04,786 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:02:04,786 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:02:04,786 - openevolve.process_parallel - INFO - Iteration 122: Program e5cf9c61-4970-4e3d-8e27-fdb2d4072f23 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.30s
+2025-11-21 16:02:04,786 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:02:11,407 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 3}
+2025-11-21 16:02:11,407 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:02:11,407 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:02:11,407 - openevolve.process_parallel - INFO - Iteration 123: Program 488ac9c0-8bb7-4376-be5a-c019307d1f1e (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.62s
+2025-11-21 16:02:11,407 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:02:18,573 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:02:18,573 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:02:18,573 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:02:18,573 - openevolve.process_parallel - INFO - Iteration 124: Program ecb1fa94-b1d4-4809-b442-ad059cbacce7 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.17s
+2025-11-21 16:02:18,573 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:02:29,640 - openevolve.process_parallel - WARNING - Iteration 125 error: LLM returned None response
+2025-11-21 16:02:40,145 - openevolve.process_parallel - WARNING - Iteration 126 error: LLM returned None response
+2025-11-21 16:02:50,021 - openevolve.process_parallel - WARNING - Iteration 127 error: LLM returned None response
+2025-11-21 16:03:00,466 - openevolve.process_parallel - WARNING - Iteration 128 error: LLM returned None response
+2025-11-21 16:03:10,851 - openevolve.process_parallel - WARNING - Iteration 129 error: LLM returned None response
+2025-11-21 16:03:19,757 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:03:19,758 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:03:19,758 - openevolve.process_parallel - INFO - Iteration 130: Program 7472ac52-c037-429d-ac64-a157605b0777 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.90s
+2025-11-21 16:03:19,758 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:03:26,958 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:03:26,958 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:03:26,958 - openevolve.process_parallel - INFO - Iteration 131: Program 0e03bb97-14d7-4ebd-9044-313c2367fd82 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.20s
+2025-11-21 16:03:26,958 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:03:37,822 - openevolve.process_parallel - WARNING - Iteration 132 error: LLM returned None response
+2025-11-21 16:03:47,560 - openevolve.process_parallel - WARNING - Iteration 133 error: LLM returned None response
+2025-11-21 16:03:57,566 - openevolve.process_parallel - WARNING - Iteration 134 error: LLM returned None response
+2025-11-21 16:04:07,796 - openevolve.process_parallel - WARNING - Iteration 135 error: LLM returned None response
+2025-11-21 16:04:18,294 - openevolve.process_parallel - WARNING - Iteration 136 error: LLM returned None response
+2025-11-21 16:04:28,745 - openevolve.process_parallel - WARNING - Iteration 137 error: LLM returned None response
+2025-11-21 16:04:38,959 - openevolve.process_parallel - WARNING - Iteration 138 error: LLM returned None response
+2025-11-21 16:04:49,794 - openevolve.process_parallel - WARNING - Iteration 139 error: LLM returned None response
+2025-11-21 16:04:58,747 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:04:58,747 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:04:58,747 - openevolve.process_parallel - INFO - Iteration 140: Program 3d998ad6-c70b-4556-86e6-b22c315bfe9f (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.95s
+2025-11-21 16:04:58,747 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:04:58,747 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 140
+2025-11-21 16:04:58,747 - openevolve.database - INFO - Island Status:
+2025-11-21 16:04:58,747 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=37 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:04:58,751 - openevolve.database - INFO - Saved database with 4 programs to openevolve_output/checkpoints/checkpoint_140
+2025-11-21 16:04:58,752 - openevolve.controller - INFO - Saved best program at checkpoint 140 with metrics: combined_score=1.1938, score=1.1938, var_x=0.3310, var_xi=3.6062
+2025-11-21 16:04:58,752 - openevolve.controller - INFO - Saved checkpoint at iteration 140 to openevolve_output/checkpoints/checkpoint_140
+2025-11-21 16:05:05,278 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:05:05,278 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:05:05,278 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:05:05,278 - openevolve.process_parallel - INFO - Iteration 141: Program 612ce18d-f113-4236-b655-8c35f0bcf81a (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.53s
+2025-11-21 16:05:05,278 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:05:18,284 - openevolve.process_parallel - WARNING - Iteration 142 error: LLM returned None response
+2025-11-21 16:05:29,137 - openevolve.process_parallel - WARNING - Iteration 143 error: LLM returned None response
+2025-11-21 16:05:37,433 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:05:37,433 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:05:37,433 - openevolve.process_parallel - INFO - Iteration 144: Program 430ec5a9-95b2-448d-a018-0b1ef39e35ec (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.29s
+2025-11-21 16:05:37,433 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:05:47,887 - openevolve.process_parallel - WARNING - Iteration 145 error: LLM returned None response
+2025-11-21 16:05:55,596 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:05:55,596 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:05:55,596 - openevolve.process_parallel - INFO - Iteration 146: Program 1b6a079b-0d81-4551-aeb5-60ed47b1f0b4 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.70s
+2025-11-21 16:05:55,596 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:06:01,889 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:06:01,889 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:06:01,889 - openevolve.process_parallel - INFO - Iteration 147: Program 3e123b40-19b8-4698-b890-2bc32d38b0ac (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.30s
+2025-11-21 16:06:01,889 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:06:12,610 - openevolve.process_parallel - WARNING - Iteration 148 error: LLM returned None response
+2025-11-21 16:06:22,522 - openevolve.process_parallel - WARNING - Iteration 149 error: LLM returned None response
+2025-11-21 16:06:33,193 - openevolve.process_parallel - WARNING - Iteration 150 error: LLM returned None response
+2025-11-21 16:06:39,608 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:06:39,609 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:06:39,609 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:06:39,609 - openevolve.process_parallel - INFO - Iteration 151: Program a1ef7cdf-855b-4443-895f-5e6af5388870 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.41s
+2025-11-21 16:06:39,609 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:06:49,548 - openevolve.process_parallel - WARNING - Iteration 152 error: LLM returned None response
+2025-11-21 16:07:00,301 - openevolve.process_parallel - WARNING - Iteration 153 error: LLM returned None response
+2025-11-21 16:07:06,755 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:07:06,755 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:07:06,755 - openevolve.process_parallel - INFO - Iteration 154: Program b7421897-b2bc-4331-b719-f981a631c4eb (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.44s
+2025-11-21 16:07:06,755 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:07:15,394 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:07:15,394 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:07:15,394 - openevolve.process_parallel - INFO - Iteration 155: Program 8e19c5c8-428b-414e-b72a-22096070490b (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.64s
+2025-11-21 16:07:15,394 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:07:25,075 - openevolve.process_parallel - WARNING - Iteration 156 error: LLM returned None response
+2025-11-21 16:07:32,909 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:07:32,909 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:07:32,909 - openevolve.process_parallel - INFO - Iteration 157: Program 36b085dc-c240-4dec-9176-5d7dc1d5a9c6 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.83s
+2025-11-21 16:07:32,909 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:07:40,851 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:07:40,852 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:07:40,852 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:07:40,852 - openevolve.process_parallel - INFO - Iteration 158: Program 8a32372c-d525-4fcb-af5c-ff007ae7a024 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.94s
+2025-11-21 16:07:40,852 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:07:47,720 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 3}
+2025-11-21 16:07:47,720 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:07:47,720 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:07:47,720 - openevolve.process_parallel - INFO - Iteration 159: Program d6944114-0258-4943-a13f-688862ebc6b4 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.87s
+2025-11-21 16:07:47,720 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:07:57,858 - openevolve.process_parallel - WARNING - Iteration 160 error: LLM returned None response
+2025-11-21 16:08:03,726 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:08:03,726 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:08:03,726 - openevolve.process_parallel - INFO - Iteration 161: Program 7be1e259-5433-48b8-ace3-b42d51ab4818 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 5.87s
+2025-11-21 16:08:03,726 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:08:10,322 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:08:10,322 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:08:10,322 - openevolve.process_parallel - INFO - Iteration 162: Program bbb9e4bd-1e41-4257-9e95-e28929e2ac71 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.59s
+2025-11-21 16:08:10,322 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:08:20,758 - openevolve.process_parallel - WARNING - Iteration 163 error: LLM returned None response
+2025-11-21 16:08:30,294 - openevolve.process_parallel - WARNING - Iteration 164 error: LLM returned None response
+2025-11-21 16:08:41,870 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:08:41,871 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:08:41,871 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:08:41,871 - openevolve.process_parallel - INFO - Performing migration at iteration 165
+2025-11-21 16:08:41,871 - openevolve.database - INFO - Island Status:
+2025-11-21 16:08:41,871 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=50 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:08:41,871 - openevolve.process_parallel - INFO - Iteration 165: Program a3270258-1129-4026-9830-0a27aea3e97a (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 11.58s
+2025-11-21 16:08:41,871 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:08:51,444 - openevolve.process_parallel - WARNING - Iteration 166 error: LLM returned None response
+2025-11-21 16:09:01,792 - openevolve.process_parallel - WARNING - Iteration 167 error: LLM returned None response
+2025-11-21 16:09:08,491 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:09:08,492 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:09:08,492 - openevolve.process_parallel - INFO - Performing migration at iteration 168
+2025-11-21 16:09:08,492 - openevolve.database - INFO - Island Status:
+2025-11-21 16:09:08,492 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=51 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:09:08,492 - openevolve.process_parallel - INFO - Iteration 168: Program bd18615f-a076-433a-82bc-ee55cca75980 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.70s
+2025-11-21 16:09:08,492 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:09:18,682 - openevolve.process_parallel - WARNING - Iteration 169 error: LLM returned None response
+2025-11-21 16:09:24,833 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:09:24,833 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:09:24,834 - openevolve.process_parallel - INFO - Performing migration at iteration 170
+2025-11-21 16:09:24,834 - openevolve.database - INFO - Island Status:
+2025-11-21 16:09:24,834 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=52 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:09:24,834 - openevolve.process_parallel - INFO - Iteration 170: Program 932e3c24-e687-4cad-a590-b5c5a7da6595 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.15s
+2025-11-21 16:09:24,834 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:09:35,355 - openevolve.process_parallel - WARNING - Iteration 171 error: LLM returned None response
+2025-11-21 16:09:45,859 - openevolve.process_parallel - WARNING - Iteration 172 error: LLM returned None response
+2025-11-21 16:09:56,241 - openevolve.process_parallel - WARNING - Iteration 173 error: LLM returned None response
+2025-11-21 16:10:06,438 - openevolve.process_parallel - WARNING - Iteration 174 error: LLM returned None response
+2025-11-21 16:10:13,504 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:10:13,504 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:10:13,504 - openevolve.process_parallel - INFO - Performing migration at iteration 175
+2025-11-21 16:10:13,504 - openevolve.database - INFO - Island Status:
+2025-11-21 16:10:13,504 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=53 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:10:13,504 - openevolve.process_parallel - INFO - Iteration 175: Program 8a591267-64c5-413e-819d-042075c99a4c (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.06s
+2025-11-21 16:10:13,504 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:10:23,649 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 3}
+2025-11-21 16:10:23,649 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:10:23,649 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:10:23,649 - openevolve.process_parallel - INFO - Performing migration at iteration 176
+2025-11-21 16:10:23,650 - openevolve.database - INFO - Island Status:
+2025-11-21 16:10:23,650 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=54 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:10:23,650 - openevolve.process_parallel - INFO - Iteration 176: Program 48a5c29c-6256-4ff8-8800-128dadd3857f (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 10.15s
+2025-11-21 16:10:23,650 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:10:34,848 - openevolve.process_parallel - WARNING - Iteration 177 error: LLM returned None response
+2025-11-21 16:10:41,735 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:10:41,735 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:10:41,735 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:10:41,735 - openevolve.process_parallel - INFO - Performing migration at iteration 178
+2025-11-21 16:10:41,735 - openevolve.database - INFO - Island Status:
+2025-11-21 16:10:41,735 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=55 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:10:41,735 - openevolve.process_parallel - INFO - Iteration 178: Program d057ed42-a766-462d-920a-684e4ddcf70a (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.89s
+2025-11-21 16:10:41,735 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:10:51,803 - openevolve.process_parallel - WARNING - Iteration 179 error: LLM returned None response
+2025-11-21 16:10:59,334 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:10:59,335 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:10:59,335 - openevolve.process_parallel - INFO - Performing migration at iteration 180
+2025-11-21 16:10:59,335 - openevolve.database - INFO - Island Status:
+2025-11-21 16:10:59,335 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=56 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:10:59,335 - openevolve.process_parallel - INFO - Iteration 180: Program 83c1a6b2-6e25-440c-9fc6-23777c1e7fa8 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.53s
+2025-11-21 16:10:59,335 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:10:59,335 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 180
+2025-11-21 16:10:59,335 - openevolve.database - INFO - Island Status:
+2025-11-21 16:10:59,335 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=56 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:10:59,338 - openevolve.database - INFO - Saved database with 4 programs to openevolve_output/checkpoints/checkpoint_180
+2025-11-21 16:10:59,339 - openevolve.controller - INFO - Saved best program at checkpoint 180 with metrics: combined_score=1.1938, score=1.1938, var_x=0.3310, var_xi=3.6062
+2025-11-21 16:10:59,339 - openevolve.controller - INFO - Saved checkpoint at iteration 180 to openevolve_output/checkpoints/checkpoint_180
+2025-11-21 16:11:10,406 - openevolve.process_parallel - WARNING - Iteration 181 error: LLM returned None response
+2025-11-21 16:11:20,222 - openevolve.process_parallel - WARNING - Iteration 182 error: LLM returned None response
+2025-11-21 16:11:30,301 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:11:30,301 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:11:30,301 - openevolve.process_parallel - INFO - Performing migration at iteration 183
+2025-11-21 16:11:30,301 - openevolve.database - INFO - Island Status:
+2025-11-21 16:11:30,301 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=57 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:11:30,301 - openevolve.process_parallel - INFO - Iteration 183: Program f19a1334-b53a-4d87-bab4-b2dc5c88e493 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 10.07s
+2025-11-21 16:11:30,301 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:11:38,404 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:11:38,405 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:11:38,405 - openevolve.process_parallel - INFO - Performing migration at iteration 184
+2025-11-21 16:11:38,405 - openevolve.database - INFO - Island Status:
+2025-11-21 16:11:38,405 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=58 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:11:38,405 - openevolve.process_parallel - INFO - Iteration 184: Program c75bb385-bcb7-473e-8b80-a25c2ae3bba1 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.10s
+2025-11-21 16:11:38,405 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:11:48,852 - openevolve.process_parallel - WARNING - Iteration 185 error: LLM returned None response
+2025-11-21 16:11:55,795 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:11:55,796 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:11:55,796 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:11:55,796 - openevolve.process_parallel - INFO - Performing migration at iteration 186
+2025-11-21 16:11:55,796 - openevolve.database - INFO - Island Status:
+2025-11-21 16:11:55,796 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=59 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:11:55,796 - openevolve.process_parallel - INFO - Iteration 186: Program 0f533298-6323-4377-a350-8886ff599450 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.94s
+2025-11-21 16:11:55,796 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:12:01,738 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:12:01,738 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:12:01,738 - openevolve.process_parallel - INFO - Performing migration at iteration 187
+2025-11-21 16:12:01,738 - openevolve.database - INFO - Island Status:
+2025-11-21 16:12:01,738 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=60 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:12:01,738 - openevolve.process_parallel - INFO - Iteration 187: Program 9f867feb-6bdb-4f56-82f2-e9a5ce18c838 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 5.95s
+2025-11-21 16:12:01,738 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:12:12,514 - openevolve.process_parallel - WARNING - Iteration 188 error: LLM returned None response
+2025-11-21 16:12:19,360 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:12:19,360 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:12:19,360 - openevolve.process_parallel - INFO - Performing migration at iteration 189
+2025-11-21 16:12:19,360 - openevolve.database - INFO - Island Status:
+2025-11-21 16:12:19,360 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=61 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:12:19,360 - openevolve.process_parallel - INFO - Iteration 189: Program 6d8a8ce3-4272-4d3f-b833-13938bbb6aa8 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.83s
+2025-11-21 16:12:19,360 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:12:26,324 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:12:26,324 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:12:26,324 - openevolve.process_parallel - INFO - Performing migration at iteration 190
+2025-11-21 16:12:26,324 - openevolve.database - INFO - Island Status:
+2025-11-21 16:12:26,324 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=62 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:12:26,324 - openevolve.process_parallel - INFO - Iteration 190: Program b365c25a-6b55-415e-bed7-6d7fc156a912 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.96s
+2025-11-21 16:12:26,324 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:12:32,931 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:12:32,931 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:12:32,931 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:12:32,931 - openevolve.process_parallel - INFO - Performing migration at iteration 191
+2025-11-21 16:12:32,931 - openevolve.database - INFO - Island Status:
+2025-11-21 16:12:32,931 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.87, gen=63 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:12:32,931 - openevolve.process_parallel - INFO - Iteration 191: Program 3f0ea86a-a968-42eb-b7c2-d52d315eee06 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.60s
+2025-11-21 16:12:32,931 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:12:43,268 - openevolve.process_parallel - WARNING - Iteration 192 error: LLM returned None response
+2025-11-21 16:12:53,078 - openevolve.process_parallel - WARNING - Iteration 193 error: LLM returned None response
+2025-11-21 16:13:03,502 - openevolve.process_parallel - WARNING - Iteration 194 error: LLM returned None response
+2025-11-21 16:13:10,625 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:13:10,625 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:13:10,625 - openevolve.process_parallel - INFO - Performing migration at iteration 195
+2025-11-21 16:13:10,625 - openevolve.database - INFO - Island Status:
+2025-11-21 16:13:10,625 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.87, gen=64 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:13:10,625 - openevolve.process_parallel - INFO - Iteration 195: Program 1ad9756d-9cfc-492c-92ee-fc433ec3cd86 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.12s
+2025-11-21 16:13:10,625 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:13:20,601 - openevolve.process_parallel - WARNING - Iteration 196 error: LLM returned None response
+2025-11-21 16:13:30,428 - openevolve.process_parallel - WARNING - Iteration 197 error: LLM returned None response
+2025-11-21 16:13:40,743 - openevolve.process_parallel - WARNING - Iteration 198 error: LLM returned None response
+2025-11-21 16:13:47,225 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:13:47,225 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:13:47,225 - openevolve.process_parallel - INFO - Performing migration at iteration 199
+2025-11-21 16:13:47,226 - openevolve.database - INFO - Island Status:
+2025-11-21 16:13:47,226 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.87, gen=65 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:13:47,226 - openevolve.process_parallel - INFO - Iteration 199: Program 9cbf4ac1-f7f2-412c-9848-bd813f52ebb2 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.47s
+2025-11-21 16:13:47,226 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:13:54,671 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:13:54,671 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:13:54,671 - openevolve.process_parallel - INFO - Performing migration at iteration 200
+2025-11-21 16:13:54,671 - openevolve.database - INFO - Island Status:
+2025-11-21 16:13:54,671 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=66 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:13:54,671 - openevolve.process_parallel - INFO - Iteration 200: Program d047f92b-aefe-496d-be69-ad254675bb7f (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.45s
+2025-11-21 16:13:54,671 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:13:54,671 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 200
+2025-11-21 16:13:54,671 - openevolve.database - INFO - Island Status:
+2025-11-21 16:13:54,671 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=66 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:13:54,675 - openevolve.database - INFO - Saved database with 4 programs to openevolve_output/checkpoints/checkpoint_200
+2025-11-21 16:13:54,676 - openevolve.controller - INFO - Saved best program at checkpoint 200 with metrics: combined_score=1.1938, score=1.1938, var_x=0.3310, var_xi=3.6062
+2025-11-21 16:13:54,676 - openevolve.controller - INFO - Saved checkpoint at iteration 200 to openevolve_output/checkpoints/checkpoint_200
+2025-11-21 16:14:02,065 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:14:02,065 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:14:02,065 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:14:02,065 - openevolve.process_parallel - INFO - Performing migration at iteration 201
+2025-11-21 16:14:02,065 - openevolve.database - INFO - Island Status:
+2025-11-21 16:14:02,065 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=67 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:14:02,065 - openevolve.process_parallel - INFO - Iteration 201: Program 84f79d98-9fec-4d27-94e7-32adbd1a22c0 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.39s
+2025-11-21 16:14:02,065 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:14:08,782 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:14:08,783 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:14:08,783 - openevolve.process_parallel - INFO - Performing migration at iteration 202
+2025-11-21 16:14:08,783 - openevolve.database - INFO - Island Status:
+2025-11-21 16:14:08,783 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=68 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:14:08,783 - openevolve.process_parallel - INFO - Iteration 202: Program 79336cde-87fb-4ed1-ba76-15f25ff410fc (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.72s
+2025-11-21 16:14:08,783 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:14:19,748 - openevolve.process_parallel - WARNING - Iteration 203 error: LLM returned None response
+2025-11-21 16:14:26,838 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:14:26,838 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:14:26,838 - openevolve.process_parallel - INFO - Performing migration at iteration 204
+2025-11-21 16:14:26,838 - openevolve.database - INFO - Island Status:
+2025-11-21 16:14:26,838 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=69 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:14:26,838 - openevolve.process_parallel - INFO - Iteration 204: Program b8863fc7-d0fe-4db8-b61e-d4f99bee933e (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.09s
+2025-11-21 16:14:26,838 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:14:36,628 - openevolve.process_parallel - WARNING - Iteration 205 error: LLM returned None response
+2025-11-21 16:14:47,150 - openevolve.process_parallel - WARNING - Iteration 206 error: LLM returned None response
+2025-11-21 16:14:54,494 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:14:54,494 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:14:54,495 - openevolve.process_parallel - INFO - Performing migration at iteration 207
+2025-11-21 16:14:54,495 - openevolve.database - INFO - Island Status:
+2025-11-21 16:14:54,495 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=70 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:14:54,495 - openevolve.process_parallel - INFO - Iteration 207: Program 67062a1d-ced4-433a-ae2e-d2a21b51a3fa (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.34s
+2025-11-21 16:14:54,495 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:15:01,173 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:15:01,173 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:15:01,173 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:15:01,173 - openevolve.process_parallel - INFO - Performing migration at iteration 208
+2025-11-21 16:15:01,173 - openevolve.database - INFO - Island Status:
+2025-11-21 16:15:01,173 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=71 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:15:01,173 - openevolve.process_parallel - INFO - Iteration 208: Program 26762a78-5572-44fd-86f5-0725b02a1714 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.68s
+2025-11-21 16:15:01,173 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:15:07,581 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:15:07,582 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:15:07,582 - openevolve.process_parallel - INFO - Performing migration at iteration 209
+2025-11-21 16:15:07,582 - openevolve.database - INFO - Island Status:
+2025-11-21 16:15:07,582 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=72 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:15:07,582 - openevolve.process_parallel - INFO - Iteration 209: Program baefe6fc-4ac2-4d9c-bb56-c36e059ec5fa (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.40s
+2025-11-21 16:15:07,582 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:15:17,977 - openevolve.process_parallel - WARNING - Iteration 210 error: LLM returned None response
+2025-11-21 16:15:24,798 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:15:24,798 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:15:24,798 - openevolve.process_parallel - INFO - Performing migration at iteration 211
+2025-11-21 16:15:24,798 - openevolve.database - INFO - Island Status:
+2025-11-21 16:15:24,798 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=73 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:15:24,798 - openevolve.process_parallel - INFO - Iteration 211: Program 64cf8667-62ff-414f-a180-22eaf9d5dfb6 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.82s
+2025-11-21 16:15:24,798 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:15:35,325 - openevolve.process_parallel - WARNING - Iteration 212 error: LLM returned None response
+2025-11-21 16:15:42,266 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:15:42,266 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:15:42,266 - openevolve.process_parallel - INFO - Performing migration at iteration 213
+2025-11-21 16:15:42,266 - openevolve.database - INFO - Island Status:
+2025-11-21 16:15:42,266 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=74 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:15:42,266 - openevolve.process_parallel - INFO - Iteration 213: Program 65b6d0a1-2a66-445e-a382-50728f7f542b (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.94s
+2025-11-21 16:15:42,266 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:15:52,806 - openevolve.process_parallel - WARNING - Iteration 214 error: LLM returned None response
+2025-11-21 16:16:04,313 - openevolve.process_parallel - WARNING - Iteration 215 error: LLM returned None response
+2025-11-21 16:16:12,851 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:16:12,851 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:16:12,851 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:16:12,851 - openevolve.process_parallel - INFO - Performing migration at iteration 216
+2025-11-21 16:16:12,851 - openevolve.database - INFO - Island Status:
+2025-11-21 16:16:12,851 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=75 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:16:12,851 - openevolve.process_parallel - INFO - Iteration 216: Program 7b9ae715-cfc3-4906-9460-a30c2abe1695 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.53s
+2025-11-21 16:16:12,851 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:16:22,891 - openevolve.process_parallel - WARNING - Iteration 217 error: LLM returned None response
+2025-11-21 16:16:32,663 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:16:32,663 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:16:32,663 - openevolve.process_parallel - INFO - Performing migration at iteration 218
+2025-11-21 16:16:32,663 - openevolve.database - INFO - Island Status:
+2025-11-21 16:16:32,664 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=76 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:16:32,664 - openevolve.process_parallel - INFO - Iteration 218: Program 284935eb-a9bf-4fa1-a8d8-0c1564a15551 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 9.77s
+2025-11-21 16:16:32,664 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:16:44,058 - openevolve.process_parallel - WARNING - Iteration 219 error: LLM returned None response
+2025-11-21 16:16:53,986 - openevolve.process_parallel - WARNING - Iteration 220 error: LLM returned None response
+2025-11-21 16:17:03,418 - openevolve.process_parallel - WARNING - Iteration 221 error: LLM returned None response
+2025-11-21 16:17:14,083 - openevolve.process_parallel - WARNING - Iteration 222 error: LLM returned None response
+2025-11-21 16:17:22,316 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:17:22,316 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:17:22,316 - openevolve.process_parallel - INFO - Performing migration at iteration 223
+2025-11-21 16:17:22,316 - openevolve.database - INFO - Island Status:
+2025-11-21 16:17:22,316 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=77 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:17:22,316 - openevolve.process_parallel - INFO - Iteration 223: Program 23c7a8a2-2114-47d1-9e5c-fe9b2c47833a (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.23s
+2025-11-21 16:17:22,316 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:17:32,996 - openevolve.process_parallel - WARNING - Iteration 224 error: LLM returned None response
+2025-11-21 16:17:43,126 - openevolve.process_parallel - WARNING - Iteration 225 error: LLM returned None response
+2025-11-21 16:17:52,931 - openevolve.process_parallel - WARNING - Iteration 226 error: LLM returned None response
+2025-11-21 16:18:03,439 - openevolve.process_parallel - WARNING - Iteration 227 error: LLM returned None response
+2025-11-21 16:18:13,670 - openevolve.process_parallel - WARNING - Iteration 228 error: LLM returned None response
+2025-11-21 16:18:24,212 - openevolve.process_parallel - WARNING - Iteration 229 error: LLM returned None response
+2025-11-21 16:18:34,516 - openevolve.process_parallel - WARNING - Iteration 230 error: LLM returned None response
+2025-11-21 16:18:44,593 - openevolve.process_parallel - WARNING - Iteration 231 error: LLM returned None response
+2025-11-21 16:18:54,918 - openevolve.process_parallel - WARNING - Iteration 232 error: LLM returned None response
+2025-11-21 16:19:01,842 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:19:01,842 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:19:01,842 - openevolve.process_parallel - INFO - Performing migration at iteration 233
+2025-11-21 16:19:01,842 - openevolve.database - INFO - Island Status:
+2025-11-21 16:19:01,842 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=78 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:19:01,842 - openevolve.process_parallel - INFO - Iteration 233: Program bbf45937-f83a-4e1d-8abd-0ee2428613a8 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.93s
+2025-11-21 16:19:01,842 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:19:08,094 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:19:08,094 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:19:08,094 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:19:08,094 - openevolve.process_parallel - INFO - Performing migration at iteration 234
+2025-11-21 16:19:08,095 - openevolve.database - INFO - Island Status:
+2025-11-21 16:19:08,095 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=79 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:19:08,095 - openevolve.process_parallel - INFO - Iteration 234: Program 17f83867-29de-4fa1-95f4-7a75997be0bd (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.25s
+2025-11-21 16:19:08,095 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:19:18,969 - openevolve.process_parallel - WARNING - Iteration 235 error: LLM returned None response
+2025-11-21 16:19:25,962 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:19:25,962 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:19:25,962 - openevolve.process_parallel - INFO - Performing migration at iteration 236
+2025-11-21 16:19:25,962 - openevolve.database - INFO - Island Status:
+2025-11-21 16:19:25,962 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=80 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:19:25,963 - openevolve.process_parallel - INFO - Iteration 236: Program 38ef7a69-684f-45ba-819f-9345da02ac48 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.00s
+2025-11-21 16:19:25,963 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:19:37,044 - openevolve.process_parallel - WARNING - Iteration 237 error: LLM returned None response
+2025-11-21 16:19:43,960 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:19:43,961 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:19:43,961 - openevolve.process_parallel - INFO - Performing migration at iteration 238
+2025-11-21 16:19:43,961 - openevolve.database - INFO - Island Status:
+2025-11-21 16:19:43,961 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=81 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:19:43,961 - openevolve.process_parallel - INFO - Iteration 238: Program 3db0d099-9d46-4311-89c0-c742d87b8465 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.92s
+2025-11-21 16:19:43,961 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:19:54,004 - openevolve.process_parallel - WARNING - Iteration 239 error: LLM returned None response
+2025-11-21 16:20:04,495 - openevolve.process_parallel - WARNING - Iteration 240 error: LLM returned None response
+2025-11-21 16:20:15,211 - openevolve.process_parallel - WARNING - Iteration 241 error: LLM returned None response
+2025-11-21 16:20:22,396 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:20:22,396 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:20:22,396 - openevolve.process_parallel - INFO - Performing migration at iteration 242
+2025-11-21 16:20:22,396 - openevolve.database - INFO - Island Status:
+2025-11-21 16:20:22,396 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=82 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:20:22,396 - openevolve.process_parallel - INFO - Iteration 242: Program cc1cb8f9-c107-49e2-864f-a08802d95181 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.18s
+2025-11-21 16:20:22,396 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:20:32,866 - openevolve.process_parallel - WARNING - Iteration 243 error: LLM returned None response
+2025-11-21 16:20:39,251 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:20:39,251 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:20:39,251 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:20:39,251 - openevolve.process_parallel - INFO - Performing migration at iteration 244
+2025-11-21 16:20:39,251 - openevolve.database - INFO - Island Status:
+2025-11-21 16:20:39,251 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=83 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:20:39,251 - openevolve.process_parallel - INFO - Iteration 244: Program 8d925bc2-8636-4be7-9ba3-393fee12668d (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.38s
+2025-11-21 16:20:39,251 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:20:46,430 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:20:46,431 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:20:46,431 - openevolve.process_parallel - INFO - Performing migration at iteration 245
+2025-11-21 16:20:46,431 - openevolve.database - INFO - Island Status:
+2025-11-21 16:20:46,431 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=84 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:20:46,431 - openevolve.process_parallel - INFO - Iteration 245: Program bdb69588-6e5f-465c-b022-1c63e2ec3829 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.18s
+2025-11-21 16:20:46,431 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:20:57,542 - openevolve.process_parallel - WARNING - Iteration 246 error: LLM returned None response
+2025-11-21 16:21:07,847 - openevolve.process_parallel - WARNING - Iteration 247 error: LLM returned None response
+2025-11-21 16:21:17,975 - openevolve.process_parallel - WARNING - Iteration 248 error: LLM returned None response
+2025-11-21 16:21:24,769 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:21:24,769 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:21:24,769 - openevolve.process_parallel - INFO - Performing migration at iteration 249
+2025-11-21 16:21:24,769 - openevolve.database - INFO - Island Status:
+2025-11-21 16:21:24,769 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=85 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:21:24,769 - openevolve.process_parallel - INFO - Iteration 249: Program d265cd74-df4d-421f-b9b7-c8259560fe88 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.79s
+2025-11-21 16:21:24,769 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:21:34,929 - openevolve.process_parallel - WARNING - Iteration 250 error: LLM returned None response
+2025-11-21 16:21:45,258 - openevolve.process_parallel - WARNING - Iteration 251 error: LLM returned None response
+2025-11-21 16:21:57,116 - openevolve.process_parallel - WARNING - Iteration 252 error: LLM returned None response
+2025-11-21 16:22:07,393 - openevolve.process_parallel - WARNING - Iteration 253 error: LLM returned None response
+2025-11-21 16:22:18,827 - openevolve.process_parallel - WARNING - Iteration 254 error: LLM returned None response
+2025-11-21 16:22:29,358 - openevolve.process_parallel - WARNING - Iteration 255 error: LLM returned None response
+2025-11-21 16:22:37,130 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:22:37,130 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:22:37,130 - openevolve.process_parallel - INFO - Performing migration at iteration 256
+2025-11-21 16:22:37,130 - openevolve.database - INFO - Island Status:
+2025-11-21 16:22:37,130 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=86 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:22:37,130 - openevolve.process_parallel - INFO - Iteration 256: Program 7a2f254d-7fae-43bb-9063-2e94950671b8 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.77s
+2025-11-21 16:22:37,131 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:22:47,142 - openevolve.process_parallel - WARNING - Iteration 257 error: LLM returned None response
+2025-11-21 16:22:57,438 - openevolve.process_parallel - WARNING - Iteration 258 error: LLM returned None response
+2025-11-21 16:23:07,429 - openevolve.process_parallel - WARNING - Iteration 259 error: LLM returned None response
+2025-11-21 16:23:14,721 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:23:14,721 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:23:14,721 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:23:14,721 - openevolve.process_parallel - INFO - Performing migration at iteration 260
+2025-11-21 16:23:14,721 - openevolve.database - INFO - Island Status:
+2025-11-21 16:23:14,721 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=87 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:23:14,721 - openevolve.process_parallel - INFO - Iteration 260: Program d9df6ece-7fcc-4a0d-a12f-46fefd3f9950 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.29s
+2025-11-21 16:23:14,721 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:23:14,721 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 260
+2025-11-21 16:23:14,722 - openevolve.database - INFO - Island Status:
+2025-11-21 16:23:14,722 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=87 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:23:14,727 - openevolve.database - INFO - Saved database with 4 programs to openevolve_output/checkpoints/checkpoint_260
+2025-11-21 16:23:14,728 - openevolve.controller - INFO - Saved best program at checkpoint 260 with metrics: combined_score=1.1938, score=1.1938, var_x=0.3310, var_xi=3.6062
+2025-11-21 16:23:14,728 - openevolve.controller - INFO - Saved checkpoint at iteration 260 to openevolve_output/checkpoints/checkpoint_260
+2025-11-21 16:23:24,690 - openevolve.process_parallel - WARNING - Iteration 261 error: LLM returned None response
+2025-11-21 16:23:34,863 - openevolve.process_parallel - WARNING - Iteration 262 error: LLM returned None response
+2025-11-21 16:23:45,264 - openevolve.process_parallel - WARNING - Iteration 263 error: LLM returned None response
+2025-11-21 16:23:55,221 - openevolve.process_parallel - WARNING - Iteration 264 error: LLM returned None response
+2025-11-21 16:24:02,824 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:24:02,824 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:24:02,824 - openevolve.process_parallel - INFO - Performing migration at iteration 265
+2025-11-21 16:24:02,824 - openevolve.database - INFO - Island Status:
+2025-11-21 16:24:02,824 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=88 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:24:02,824 - openevolve.process_parallel - INFO - Iteration 265: Program 0b18e733-532f-403f-b65a-3b9dff9cbdee (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.60s
+2025-11-21 16:24:02,824 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:24:10,103 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:24:10,103 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:24:10,103 - openevolve.process_parallel - INFO - Performing migration at iteration 266
+2025-11-21 16:24:10,103 - openevolve.database - INFO - Island Status:
+2025-11-21 16:24:10,103 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=89 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:24:10,103 - openevolve.process_parallel - INFO - Iteration 266: Program c4d2ea2e-423c-474e-a260-addad2ad60c9 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.28s
+2025-11-21 16:24:10,103 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:24:20,453 - openevolve.process_parallel - WARNING - Iteration 267 error: LLM returned None response
+2025-11-21 16:24:30,929 - openevolve.process_parallel - WARNING - Iteration 268 error: LLM returned None response
+2025-11-21 16:24:41,006 - openevolve.process_parallel - WARNING - Iteration 269 error: LLM returned None response
+2025-11-21 16:24:51,742 - openevolve.process_parallel - WARNING - Iteration 270 error: LLM returned None response
+2025-11-21 16:25:03,975 - openevolve.process_parallel - WARNING - Iteration 271 error: LLM returned None response
+2025-11-21 16:25:14,176 - openevolve.process_parallel - WARNING - Iteration 272 error: LLM returned None response
+2025-11-21 16:25:23,925 - openevolve.process_parallel - WARNING - Iteration 273 error: LLM returned None response
+2025-11-21 16:25:34,217 - openevolve.process_parallel - WARNING - Iteration 274 error: LLM returned None response
+2025-11-21 16:25:42,052 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:25:42,052 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:25:42,052 - openevolve.process_parallel - INFO - Performing migration at iteration 275
+2025-11-21 16:25:42,052 - openevolve.database - INFO - Island Status:
+2025-11-21 16:25:42,052 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=90 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:25:42,052 - openevolve.process_parallel - INFO - Iteration 275: Program c5cff3c6-fbfe-438c-a233-7b659a7d5628 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.82s
+2025-11-21 16:25:42,052 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:25:50,715 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:25:50,715 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:25:50,715 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:25:50,715 - openevolve.process_parallel - INFO - Performing migration at iteration 276
+2025-11-21 16:25:50,715 - openevolve.database - INFO - Island Status:
+2025-11-21 16:25:50,715 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=91 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:25:50,715 - openevolve.process_parallel - INFO - Iteration 276: Program 4db90c02-9ff9-4fca-8b1c-fe4b4ebed2bd (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.67s
+2025-11-21 16:25:50,715 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:26:01,072 - openevolve.process_parallel - WARNING - Iteration 277 error: LLM returned None response
+2025-11-21 16:26:10,591 - openevolve.process_parallel - WARNING - Iteration 278 error: LLM returned None response
+2025-11-21 16:26:20,596 - openevolve.process_parallel - WARNING - Iteration 279 error: LLM returned None response
+2025-11-21 16:26:31,146 - openevolve.process_parallel - WARNING - Iteration 280 error: LLM returned None response
+2025-11-21 16:26:44,629 - openevolve.process_parallel - WARNING - Iteration 281 error: LLM returned None response
+2025-11-21 16:26:54,939 - openevolve.process_parallel - WARNING - Iteration 282 error: LLM returned None response
+2025-11-21 16:27:03,736 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:27:03,736 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:27:03,736 - openevolve.process_parallel - INFO - Performing migration at iteration 283
+2025-11-21 16:27:03,736 - openevolve.database - INFO - Island Status:
+2025-11-21 16:27:03,736 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=92 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:27:03,736 - openevolve.process_parallel - INFO - Iteration 283: Program e9e31621-8484-4369-becc-0e04bc1843d1 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.79s
+2025-11-21 16:27:03,736 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:27:13,303 - openevolve.process_parallel - WARNING - Iteration 284 error: LLM returned None response
+2025-11-21 16:27:19,527 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:27:19,527 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:27:19,527 - openevolve.process_parallel - INFO - Performing migration at iteration 285
+2025-11-21 16:27:19,527 - openevolve.database - INFO - Island Status:
+2025-11-21 16:27:19,527 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=93 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:27:19,527 - openevolve.process_parallel - INFO - Iteration 285: Program d59db5f5-7e6f-4ab4-ad8c-bc2e0bfcbe20 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.23s
+2025-11-21 16:27:19,527 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:27:26,834 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:27:26,834 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:27:26,834 - openevolve.process_parallel - INFO - Performing migration at iteration 286
+2025-11-21 16:27:26,834 - openevolve.database - INFO - Island Status:
+2025-11-21 16:27:26,834 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=94 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:27:26,834 - openevolve.process_parallel - INFO - Iteration 286: Program d197f318-5d26-4a3b-97f7-3fdffd7b2468 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.30s
+2025-11-21 16:27:26,834 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:27:36,821 - openevolve.process_parallel - WARNING - Iteration 287 error: LLM returned None response
+2025-11-21 16:27:47,177 - openevolve.process_parallel - WARNING - Iteration 288 error: LLM returned None response
+2025-11-21 16:27:57,544 - openevolve.process_parallel - WARNING - Iteration 289 error: LLM returned None response
+2025-11-21 16:28:07,528 - openevolve.process_parallel - WARNING - Iteration 290 error: LLM returned None response
+2025-11-21 16:28:17,974 - openevolve.process_parallel - WARNING - Iteration 291 error: LLM returned None response
+2025-11-21 16:28:28,441 - openevolve.process_parallel - WARNING - Iteration 292 error: LLM returned None response
+2025-11-21 16:28:34,969 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:28:34,969 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:28:34,969 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:28:34,969 - openevolve.process_parallel - INFO - Performing migration at iteration 293
+2025-11-21 16:28:34,970 - openevolve.database - INFO - Island Status:
+2025-11-21 16:28:34,970 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=95 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:28:34,970 - openevolve.process_parallel - INFO - Iteration 293: Program 6cb53ed6-f7b0-415b-a801-4725237da4d2 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.52s
+2025-11-21 16:28:34,970 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:28:45,420 - openevolve.process_parallel - WARNING - Iteration 294 error: LLM returned None response
+2025-11-21 16:28:56,416 - openevolve.process_parallel - WARNING - Iteration 295 error: LLM returned None response
+2025-11-21 16:29:02,924 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:29:02,924 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:29:02,924 - openevolve.process_parallel - INFO - Performing migration at iteration 296
+2025-11-21 16:29:02,924 - openevolve.database - INFO - Island Status:
+2025-11-21 16:29:02,924 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=96 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:29:02,925 - openevolve.process_parallel - INFO - Iteration 296: Program c1d6c9ed-0dd4-4402-8b04-24833731245d (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.50s
+2025-11-21 16:29:02,925 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:29:10,442 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:29:10,442 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:29:10,442 - openevolve.process_parallel - INFO - Performing migration at iteration 297
+2025-11-21 16:29:10,442 - openevolve.database - INFO - Island Status:
+2025-11-21 16:29:10,442 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=97 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:29:10,442 - openevolve.process_parallel - INFO - Iteration 297: Program d016c233-83fb-4fc5-baf8-dd280cdbc5d7 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 7.52s
+2025-11-21 16:29:10,442 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:29:20,751 - openevolve.process_parallel - WARNING - Iteration 298 error: LLM returned None response
+2025-11-21 16:29:30,755 - openevolve.process_parallel - WARNING - Iteration 299 error: LLM returned None response
+2025-11-21 16:29:41,317 - openevolve.process_parallel - WARNING - Iteration 300 error: LLM returned None response
+2025-11-21 16:29:51,774 - openevolve.process_parallel - WARNING - Iteration 301 error: LLM returned None response
+2025-11-21 16:29:58,620 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:29:58,620 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:29:58,620 - openevolve.process_parallel - INFO - Performing migration at iteration 302
+2025-11-21 16:29:58,621 - openevolve.database - INFO - Island Status:
+2025-11-21 16:29:58,621 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=98 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:29:58,621 - openevolve.process_parallel - INFO - Iteration 302: Program eb738834-c50d-40b8-b666-c032dbca20d5 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.85s
+2025-11-21 16:29:58,621 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:30:08,783 - openevolve.process_parallel - WARNING - Iteration 303 error: LLM returned None response
+2025-11-21 16:30:19,318 - openevolve.process_parallel - WARNING - Iteration 304 error: LLM returned None response
+2025-11-21 16:30:29,022 - openevolve.process_parallel - WARNING - Iteration 305 error: LLM returned None response
+2025-11-21 16:30:39,026 - openevolve.process_parallel - WARNING - Iteration 306 error: LLM returned None response
+2025-11-21 16:30:45,661 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:30:45,661 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:30:45,661 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:30:45,661 - openevolve.process_parallel - INFO - Performing migration at iteration 307
+2025-11-21 16:30:45,661 - openevolve.database - INFO - Island Status:
+2025-11-21 16:30:45,661 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=99 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:30:45,661 - openevolve.process_parallel - INFO - Iteration 307: Program e0fbeb29-d82c-45b2-aa72-a7fc6e42be2f (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.63s
+2025-11-21 16:30:45,661 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:30:56,379 - openevolve.process_parallel - WARNING - Iteration 308 error: LLM returned None response
+2025-11-21 16:31:06,246 - openevolve.process_parallel - WARNING - Iteration 309 error: LLM returned None response
+2025-11-21 16:31:16,423 - openevolve.process_parallel - WARNING - Iteration 310 error: LLM returned None response
+2025-11-21 16:31:26,629 - openevolve.process_parallel - WARNING - Iteration 311 error: LLM returned None response
+2025-11-21 16:31:41,612 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 3}
+2025-11-21 16:31:41,612 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:31:41,613 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:31:41,613 - openevolve.process_parallel - INFO - Performing migration at iteration 312
+2025-11-21 16:31:41,613 - openevolve.database - INFO - Island Status:
+2025-11-21 16:31:41,613 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=100 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:31:41,613 - openevolve.process_parallel - INFO - Iteration 312: Program 0ee23cd5-8302-4ec7-9d4b-10ab49aa2829 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 14.98s
+2025-11-21 16:31:41,613 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:31:51,053 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:31:51,053 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:31:51,053 - openevolve.process_parallel - INFO - Performing migration at iteration 313
+2025-11-21 16:31:51,053 - openevolve.database - INFO - Island Status:
+2025-11-21 16:31:51,053 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=101 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:31:51,053 - openevolve.process_parallel - INFO - Iteration 313: Program b77e8135-bb46-42bf-ab25-beea0522d1d7 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 9.44s
+2025-11-21 16:31:51,053 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:31:57,641 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:31:57,641 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:31:57,641 - openevolve.process_parallel - INFO - Performing migration at iteration 314
+2025-11-21 16:31:57,641 - openevolve.database - INFO - Island Status:
+2025-11-21 16:31:57,641 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=36.52, gen=102 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:31:57,641 - openevolve.process_parallel - INFO - Iteration 314: Program 7c1b464f-8aaf-4e2d-8938-765b363c5448 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.59s
+2025-11-21 16:31:57,641 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:32:08,435 - openevolve.process_parallel - WARNING - Iteration 315 error: LLM returned None response
+2025-11-21 16:32:19,594 - openevolve.process_parallel - WARNING - Iteration 316 error: LLM returned None response
+2025-11-21 16:32:30,028 - openevolve.process_parallel - WARNING - Iteration 317 error: LLM returned None response
+2025-11-21 16:32:38,751 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:32:38,752 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:32:38,752 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:32:38,752 - openevolve.process_parallel - INFO - Performing migration at iteration 318
+2025-11-21 16:32:38,752 - openevolve.database - INFO - Island Status:
+2025-11-21 16:32:38,752 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=103 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:32:38,752 - openevolve.process_parallel - INFO - Iteration 318: Program 74299a3a-5a56-4b37-affc-e72645d8f606 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.73s
+2025-11-21 16:32:38,752 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:32:50,215 - openevolve.process_parallel - WARNING - Iteration 319 error: LLM returned None response
+2025-11-21 16:33:00,723 - openevolve.process_parallel - WARNING - Iteration 320 error: LLM returned None response
+2025-11-21 16:33:07,314 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:33:07,314 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:33:07,314 - openevolve.process_parallel - INFO - Performing migration at iteration 321
+2025-11-21 16:33:07,314 - openevolve.database - INFO - Island Status:
+2025-11-21 16:33:07,314 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=34.93, gen=104 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:33:07,314 - openevolve.process_parallel - INFO - Iteration 321: Program 1ad4b5a9-daaf-4875-b96e-8757e5bb0ef7 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.58s
+2025-11-21 16:33:07,314 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:33:17,656 - openevolve.process_parallel - WARNING - Iteration 322 error: LLM returned None response
+2025-11-21 16:33:26,506 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:33:26,506 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:33:26,506 - openevolve.process_parallel - INFO - Performing migration at iteration 323
+2025-11-21 16:33:26,506 - openevolve.database - INFO - Island Status:
+2025-11-21 16:33:26,506 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=105 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:33:26,506 - openevolve.process_parallel - INFO - Iteration 323: Program 6bd94c15-cdfd-426c-866e-977b05784cae (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 8.85s
+2025-11-21 16:33:26,506 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:33:38,720 - openevolve.process_parallel - WARNING - Iteration 324 error: LLM returned None response
+2025-11-21 16:33:45,642 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:33:45,643 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:33:45,643 - openevolve.process_parallel - INFO - Performing migration at iteration 325
+2025-11-21 16:33:45,643 - openevolve.database - INFO - Island Status:
+2025-11-21 16:33:45,643 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=106 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:33:45,643 - openevolve.process_parallel - INFO - Iteration 325: Program 5eafc952-837b-4bfd-ae6b-1ef65e2f60f1 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 6.92s
+2025-11-21 16:33:45,643 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:33:55,765 - openevolve.process_parallel - WARNING - Iteration 326 error: LLM returned None response
+2025-11-21 16:34:06,220 - openevolve.process_parallel - WARNING - Iteration 327 error: LLM returned None response
+2025-11-21 16:34:29,437 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 0}
+2025-11-21 16:34:29,438 - openevolve.database - INFO - Population size (5) exceeds limit (4), removing 1 programs
+2025-11-21 16:34:29,438 - openevolve.database - INFO - Population size after cleanup: 4
+2025-11-21 16:34:29,438 - openevolve.process_parallel - INFO - Performing migration at iteration 328
+2025-11-21 16:34:29,438 - openevolve.database - INFO - Island Status:
+2025-11-21 16:34:29,438 - openevolve.database - INFO -  * Island 0: 4 programs, best=1.1938, avg=0.3032, diversity=29.85, gen=107 (best: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053)
+2025-11-21 16:34:29,438 - openevolve.process_parallel - INFO - Iteration 328: Program 98f3d910-ec86-4dc5-bf3b-fc400ae340d3 (parent: 4dbc4c5b-e0ae-43b3-b150-cfc798b98053) completed in 23.22s
+2025-11-21 16:34:29,438 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0063, score=0.0063, var_x=0.1250, var_xi=0.0507
+2025-11-21 16:34:36,354 - openevolve.controller - INFO - Received signal 2, initiating graceful shutdown...
+2025-11-21 16:34:36,354 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2025-11-21 16:34:36,364 - openevolve.process_parallel - INFO - Shutdown requested, canceling remaining evaluations...
+2025-11-21 16:34:36,365 - openevolve.process_parallel - INFO - ✅ Evolution completed - Shutdown requested
+2025-11-21 16:34:36,365 - openevolve.controller - INFO - Evolution stopped due to shutdown request
+2025-11-21 16:34:37,173 - openevolve.controller - INFO - Force exit requested - terminating immediately
+2025-11-21 16:34:37,353 - openevolve.controller - INFO - Force exit requested - terminating immediately
