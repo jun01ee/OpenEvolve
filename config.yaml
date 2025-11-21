@@ -1,63 +1,63 @@
 # =========================
+#  Experiment Definition
+# =========================
+experiment_name: "heisenberg_minimization"
+initial_program: "initial_program.py"
+evaluation_file: "evaluator.py"
+
+# =========================
 #  Evolution Run Settings
 # =========================
-max_iterations: 100
+iterations: 200
 checkpoint_interval: 20
-diff_based_evolution: false
+diff_based_evolution: true   # Keep TRUE for Free Tier (saves output tokens)
 cascade_evaluation: false
-max_code_length: 8000
-
+max_code_length: 4000
 
 # =========================
-#  LLM Configuration
+#  LLM Configuration (Ensemble Schema)
 # =========================
 llm:
-  primary_model: "gemini-2.5-flash"        
+  # Corrected keys for your OpenEvolve version:
+  primary_model: "gemini-2.5-flash" 
   primary_model_weight: 1.0
   api_base: "https://generativelanguage.googleapis.com/v1beta/openai/"
   temperature: 0.7
-  max_tokens: 4096
+  max_tokens: 2048
   timeout: 120
-
 
 # =========================
 #  Prompt Rules
 # =========================
 prompt:
+  search_string: "EVOLVE-BLOCK-START" # <--- Added here
   system_message: |
-    You are evolving Python programs for a functional optimization problem.
-    The evaluator computes a numerical loss value that must be minimized.
-
-    Rules:
-    - Always return VALID Python code only.
-    - The returned program must define either:
-        params = {"type": "...", ...}
-      OR
-        def f(x): ...
-    - Provide small, incremental mutations, not rewrites.
-    - Prefer modifying existing parameters instead of replacing everything.
-    - No Monte Carlo loops or brute-force exploration inside f(x).
-    - The function must remain numerically safe on [-6, 6].
-    - Do NOT output explanations, comments, or natural language.
+    You are evolving a Python wavefunction to minimize the Heisenberg Uncertainty Product.
     
+    The evaluator computes: Integral |x|^2 |f(x)|^2 * Integral |k|^2 |f_hat(k)|^2.
+    
+    Rules:
+    - You must define: `def get_wavefunction(x):`
+    - Do not change the function signature.
+    - Use SEARCH/REPLACE blocks to modify the code.
+    - Focus on smoothing edges to reduce momentum variance.
+    - No Monte Carlo loops.
 
 # =========================
 #  Population & Archive
 # =========================
 database:
-  population_size: 24       # Larger population increases search diversity
-  archive_size: 60
-  num_islands: 3
-  elite_selection_ratio: 0.15
+  population_size: 4     # CRITICAL: Keeps burst rate < 15 RPM for Free Tier
+  archive_size: 20
+  num_islands: 1         # CRITICAL: Prevents parallel island bursts
+  elite_selection_ratio: 0.25 
   exploitation_ratio: 0.60
   embedding_model: null
   similarity_threshold: 0.85
-
 
 # =========================
 #  Evaluator Configuration
 # =========================
 evaluator:
   timeout: 60
-  parallel_evaluations: 4
-  # Since evaluator returns a single number, no additional config needed
+  parallel_evaluations: 1

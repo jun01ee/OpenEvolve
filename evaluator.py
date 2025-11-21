@@ -1,147 +1,71 @@
-# evaluator.py
 import numpy as np
-import math
-import inspect
-
-# numerical grid (conservative)
-L = 6.0
-N = 1024   # small enough for speed, increase later for validation
-xs = np.linspace(-L, L, N)
-dx = xs[1] - xs[0]
-# frequency grid for FFT (angular frequency)
-xis = np.fft.fftfreq(N, d=dx) * 2.0 * math.pi
-
-TARGET = 0.25
-SOFT_MAX = 1e4   # large-but-finite cap for bad candidates
-BAD_PENALTY = 100.0  # initial penalty for mildly bad candidates
-
-def build_f_from_candidate(candidate_module):
-    """
-    Accept either:
-      - candidate_module.params (dict) describing a parametric family, OR
-      - candidate_module.f function (callable) that accepts a float and optional params.
-    Return a callable f(x).
-    """
-    # Case 1: params dict
-    params = getattr(candidate_module, "params", None)
-    if isinstance(params, dict):
-        # re-use the helper from initial_program if present; otherwise, define safe families
-        if hasattr(candidate_module, "build_parametric_f"):
-            return candidate_module.build_parametric_f(params)
-        else:
-            t = params.get("type", "supergauss")
-            if t == "supergauss":
-                a = float(params.get("a", 1.0)); p = float(params.get("p", 4.0))
-                return lambda x: math.exp(- (abs(x)/a)**p )
-            elif t == "lorentz":
-                b = float(params.get("b", 1.0))
-                return lambda x: 1.0 / (1.0 + (x/b)**2)
-            elif t == "mixed":
-                a = float(params.get("a", 1.0)); r = float(params.get("r", 0.5))
-                return lambda x: (1-r)*math.exp(-a*x*x) + r/(1.0 + x*x)
-    # Case 2: f function provided
-    f = getattr(candidate_module, "f", None)
-    if callable(f):
-        # Accept f(x) or f(x, **kwargs). We'll wrap to single-arg call if needed.
-        try:
-            # test call
-            _ = f(0.0)
-            return f
-        except TypeError:
-            # try call with default params
-            return (lambda x: f(x))
-    # Nothing usable
-    return None
-
-def complexity_penalty(candidate_module):
-    # simple code-length penalty
-    try:
-        src = inspect.getsource(candidate_module)
-        return 0.001 * len(src)   # tuneable
-    except Exception:
-        return 1.0
-
-def smoothness_penalty(vals):
-    # second-derivative energy as smoothness measure
-    try:
-        d2 = np.gradient(np.gradient(np.real(vals), dx), dx)
-        return 0.001 * np.sum(d2**2) * dx  # tuneable
-    except Exception:
-        return 0.0
+from scipy.integrate import simpson
 
 def evaluate(candidate_module):
-    if not hasattr(candidate_module, "__dict__"):
-        print("[ERROR] Candidate is not a valid module:", repr(candidate_module))
-        return BAD_PENALTY
-    print("[DEBUG] candidate_module.search_algorithm =", 
-      getattr(candidate_module, "search_algorithm", None))
-
     """
-    Returns dict with keys:
-      - combined_score: lower is better (distance from theoretical optimal TARGET)
-      - I1, I2 (for debugging)
-      - extras: complexity_penalty, smoothness_penalty
+    Evaluates the candidate wavefunction f(x).
+    
+    Args:
+        candidate_module: The imported module containing the evolved 
+                          'get_wavefunction' function.
+                          
+    Returns:
+        dict: {'score': float} where score is the product of variances.
     """
-    # build f
-    f_callable = build_f_from_candidate(candidate_module)
-    if f_callable is None:
-        print("[DEBUG] FAILED: no valid function or params found in candidate module")
-        return {"combined_score": BAD_PENALTY, "I1": BAD_PENALTY, "I2": BAD_PENALTY,
-                "complexity_penalty": 1.0, "smoothness_penalty": 1.0}
-
-    # evaluate on grid
+    
+    # 1. Setup Grid (High resolution to capture high-freq components)
+    N = 2048
+    L = 20.0
+    x = np.linspace(-L/2, L/2, N)
+    dx = x[1] - x[0]
+    
+    # 2. Get the candidate wavefunction
     try:
-        vals = np.array([f_callable(float(x)) for x in xs], dtype=np.complex128)
+        f = candidate_module.get_wavefunction(x)
+        
+        # Sanity check: Shape
+        if f.shape != x.shape:
+            return {'score': float('inf'), 'error': 'Shape mismatch'}
+            
+        # Sanity check: Finite values
+        if not np.all(np.isfinite(f)):
+             return {'score': float('inf'), 'error': 'NaN or Inf values'}
+             
+        # Sanity check: Non-zero
+        norm_sq = simpson(np.abs(f)**2, x)
+        if norm_sq < 1e-10:
+            return {'score': float('inf'), 'error': 'Zero norm'}
+            
     except Exception as e:
-        print("[DEBUG] FAILED: evaluating f(x) threw exception", e)
-        return {"combined_score": BAD_PENALTY, "I1": BAD_PENALTY, "I2": BAD_PENALTY,
-                "complexity_penalty": 1.0, "smoothness_penalty": 1.0}
+        return {'score': float('inf'), 'error': str(e)}
 
-    # basic sanity checks
-    if np.any(np.isnan(vals)) or np.any(np.isinf(vals)) or np.max(np.abs(vals)) > 1e6:
-        print("[DEBUG] FAILED: values invalid (NaN/Inf or too large)")
-        return {"combined_score": BAD_PENALTY, "I1": BAD_PENALTY, "I2": BAD_PENALTY,
-                "complexity_penalty": 1.0, "smoothness_penalty": 1.0}
-
-    # normalization (we keep normalization to make I1/I2 comparable)
-    norm = np.sum(np.abs(vals)**2) * dx
-    if not np.isfinite(norm) or norm <= 1e-16:
-        print("[DEBUG] FAILED: normalization invalid:", norm)
-        return {"combined_score": BAD_PENALTY, "I1": BAD_PENALTY, "I2": BAD_PENALTY,
-                "complexity_penalty": 1.0, "smoothness_penalty": 1.0}
-    vals = vals / math.sqrt(norm)
-
-    # integrals
-    try:
-        I1 = float(np.sum((xs**2) * (np.abs(vals)**2)) * dx)
-    except Exception:
-        I1 = SOFT_MAX
-    try:
-        fhat = np.fft.fft(vals)
-        I2 = float(np.sum((xis**2) * (np.abs(fhat)**2)) * (2.0*math.pi / (N * dx)))
-    except Exception as e:
-        print("[DEBUG] FAILED: FFT/I2 computation exception", e)
-        I2 = SOFT_MAX
-
-    # main objective (distance from analytic minimum)
-    Q = abs(I1 * I2 - TARGET)
-
-    # regularizers
-    cpen = complexity_penalty(candidate_module)
-    spen = smoothness_penalty(vals)
-
-    combined = Q + 0.1 * cpen + 0.1 * spen   # weights tuneable
-
-    # clip to finite range
-    if not np.isfinite(combined):
-        combined = SOFT_MAX
-
+    # 3. Normalize f(x) -> Integral |f|^2 = 1
+    f_norm = f / np.sqrt(norm_sq)
+    
+    # 4. Compute Position Variance: Int x^2 |f|^2 dx
+    # Note: We calculate the second moment around 0 as requested
+    prob_density_x = np.abs(f_norm)**2
+    var_x = simpson(x**2 * prob_density_x, x)
+    
+    # 5. Compute Momentum (Frequency) Variance
+    # We use the standard unitary FFT convention often used in physics
+    # f_hat(xi) = Integral f(x) e^{-2pi i x xi} dx
+    
+    xi = np.fft.fftshift(np.fft.fftfreq(N, d=dx))
+    f_hat = np.fft.fftshift(np.fft.fft(f_norm)) * dx # Scaled by dx for continuous approx
+    
+    # Normalize f_hat (Parseval's theorem check, strictly should be 1 already if f is norm'd)
+    norm_sq_hat = simpson(np.abs(f_hat)**2, xi) # Should be close to 1
+    
+    prob_density_xi = np.abs(f_hat)**2 / norm_sq_hat
+    var_xi = simpson(xi**2 * prob_density_xi, xi)
+    
+    # 6. The Objective: The Uncertainty Product
+    # Theoretical minimum is 1/(16*pi^2) for standard defs, or 0.5/1 depending on units.
+    product = var_x * var_xi
+    
     return {
-        "combined_score": float(min(combined, SOFT_MAX)),
-        "I1": float(min(I1, SOFT_MAX)),
-        "I2": float(min(I2, SOFT_MAX)),
-        "complexity_penalty": float(cpen),
-        "smoothness_penalty": float(spen)
+        'score': float(product),
+        'var_x': float(var_x),
+        'var_xi': float(var_xi)
     }
-
-
